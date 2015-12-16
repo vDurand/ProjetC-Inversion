@@ -2,7 +2,7 @@
 #define __TABLE_HH__
 
 typedef enum {red,green,blue} axis;
-typedef char color; /* ou int*/
+typedef int color;
 typedef enum {false,true} boolean;
 typedef color_table struct* color_table;
 

@@ -9,6 +9,12 @@
 #include <stdlib.h>
 #include "table.h"
 
+struct color_table {
+   color*  table;
+   boolean  owner;
+   int   count;
+};
+
 color_table   create_color_table(image)
 {
 
@@ -35,5 +41,5 @@ int           color_table_get_nb_color(color_table)
 }
 
 void          color_table_sort(color_table,axis){
-	
+
 }
