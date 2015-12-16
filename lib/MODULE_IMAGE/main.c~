@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include "image.h"
+
+int main(int argc,char* argv[])
+{
+  image degrade=FAIRE_image();
+  int color[3]={0,255,255};
+  int * pix,nb_pix;
+  float sum[3]={0.0,0.0,0.0};
+  int i;
+  image_initialize(degrade,3,256,256);
+  image_debut(degrade); /* On se positionne au début*/
+  do
+    {
+      do
+	{
+	  image_ecrire_pixel(degrade,color);
+	}
+      while(image_pixel_droite(degrade));/* On  parcourt la ligne de gauche à droite*/
+      color[0]++;
+    }
+  while(image_pixel_suivant(degrade));/* On passe à la ligne suivante*/
+
+  /* calcul de la couleur moyenne de R par un parcour de l'image*/
+  nb_pix=0;
+  image_debut(degrade);
+  do
+    {
+      pix=image_lire_pixel(degrade);
+      nb_pix++;
+      for(i=0;i<DIM_MAX;i++)
+	sum[i]+=pix[i];
+    }
+  while(image_pixel_suivant(degrade));
+  fprintf(stderr,"moyenne: (%f,%f,%f)\n",
+	  sum[0]/nb_pix,
+	  sum[1]/nb_pix,
+	  sum[2]/nb_pix);
+  image_to_stream(degrade,stdout);
+  return 0;
+}
