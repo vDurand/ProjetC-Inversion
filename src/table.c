@@ -1,6 +1,6 @@
 /**
 * @file table.c
-* @brief 
+* @brief Fonctions pour les tables
 * @author Durand Valentin TP3 Informatique Promo 2018
 * @date Decembre 2015
 */
@@ -63,9 +63,9 @@ color_table   color_table_duplicate(color_table cTable, int offset, int length)
 {
 	color_table subTable = malloc (sizeof (struct color_table));
 	subTable->table = malloc(3 * sizeof(int*));
-	subTable->table[0] = &cTable->table[0][offset];
-	subTable->table[1] = &cTable->table[1][offset];
-	subTable->table[2] = &cTable->table[2][offset];
+	subTable->table[red] = &cTable->table[red][offset];
+	subTable->table[green] = &cTable->table[green][offset];
+	subTable->table[blue] = &cTable->table[blue][offset];
 	subTable->count = length;
 	subTable->owner = false;
 	return subTable;
@@ -73,16 +73,30 @@ color_table   color_table_duplicate(color_table cTable, int offset, int length)
 
 void          color_table_get_color(color_table cTable, int index, color* foundColor)
 {
-	foundColor[0] = cTable->table[0][index];
-	foundColor[1] = cTable->table[1][index];
-	foundColor[2] = cTable->table[2][index];
+	foundColor[red] = cTable->table[red][index];
+	foundColor[green] = cTable->table[green][index];
+	foundColor[blue] = cTable->table[blue][index];
 }
-/*
+
 int           color_table_get_nb_color(color_table cTable)
 {
-
+	return cTable->count;
 }
 
-void          color_table_sort(color_table cTable, axis a){
+void          color_table_sort(color_table cTable, axis sortingAxis)
+{
+	int i, j, k;
+	long temp;
 
-}*/
+	for(i = 0; i < cTable->count; i++){
+		for(j = cTable->count-1; j>i; j--){
+			if(cTable->table[sortingAxis][j] < cTable->table[sortingAxis][j-1]){
+				for (k = 0;k < 3; ++k){
+					temp = cTable->table[k][j];
+					cTable->table[k][j] = cTable->table[k][j-1];
+					cTable->table[k][j-1] = temp;
+				}
+			}
+		}
+	}
+}

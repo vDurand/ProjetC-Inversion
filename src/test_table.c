@@ -30,6 +30,11 @@ int main(int argc, char *argv[])
 	printf("cT : %d ; %d\nssT : %d ; %d\n", cTable->count, cTable->owner, ssTable->count, ssTable->owner);
 	color_table_get_color(cTable, 2, searchColor);
 	printf("color 2 = %d %d %d\n", searchColor[0], searchColor[1], searchColor[2]);
+	color_table_sort(cTable, red);
+	printf("\n\n");
+	for (i = 0; i < cTable->count; i++){
+		printf("%d | %d | %d\n", cTable->table[0][i], cTable->table[1][i], cTable->table[2][i]);
+	}
 	destroy_color_table(ssTable);
 	destroy_color_table(cTable);
 	return 0;
