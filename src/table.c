@@ -24,6 +24,8 @@ color_table create_color_table(image img)
 	int * pix;
 	color_table colorTable = malloc (sizeof (struct color_table));
 
+	assert(image_give_largeur(img)>0);
+
 	colorTable->count = image_give_largeur(img);
 	colorTable->owner = true;
 	colorTable->table = malloc(3 * sizeof(int*));
@@ -59,6 +61,8 @@ boolean destroy_color_table(color_table cTable)
 {
 	int i;
 
+	assert(cTable != NULL);
+
   	cTable->count = 0;
   	if(cTable->owner){
   		for(i = 0; i < 3; i++){
@@ -66,13 +70,16 @@ boolean destroy_color_table(color_table cTable)
 	  	}
 	  	free(cTable->table);
 	  	free(cTable);
+
   		return true;
   	}
+
   	for(i = 0; i < 3; i++){
     	cTable->table[i] = NULL;
   	}
   	free(cTable->table);
   	free(cTable);
+
   	return false;
 }
 
@@ -89,12 +96,21 @@ boolean destroy_color_table(color_table cTable)
 color_table color_table_duplicate(color_table cTable, int offset, int length)
 {
 	color_table subTable = malloc (sizeof (struct color_table));
+
+	assert(cTable != NULL);
+	assert(offset >= 0);
+	assert(length > 0);
+	assert(length+offset < cTable->count);
+
 	subTable->table = malloc(3 * sizeof(int*));
+	
 	subTable->table[red] = &cTable->table[red][offset];
 	subTable->table[green] = &cTable->table[green][offset];
 	subTable->table[blue] = &cTable->table[blue][offset];
+
 	subTable->count = length;
 	subTable->owner = false;
+
 	return subTable;
 }
 
@@ -108,6 +124,11 @@ color_table color_table_duplicate(color_table cTable, int offset, int length)
  */
 void color_table_get_color(color_table cTable, int index, color* foundColor)
 {
+	assert(cTable != NULL);
+	assert(index >= 0);
+	assert(index < cTable->count-1);
+	assert(foundColor != NULL);
+
 	foundColor[red] = cTable->table[red][index];
 	foundColor[green] = cTable->table[green][index];
 	foundColor[blue] = cTable->table[blue][index];
@@ -136,6 +157,9 @@ void color_table_sort(color_table cTable, axis sortingAxis)
 {
 	int i, j, k;
 	long temp;
+
+	assert(cTable != NULL);
+	assert(sortingAxis >= 0 && sortingAxis < 3);
 
 	for(i = 0; i < cTable->count; i++){
 		for(j = cTable->count-1; j>i; j--){
