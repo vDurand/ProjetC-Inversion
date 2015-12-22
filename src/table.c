@@ -17,7 +17,23 @@ struct color_table {
 
 color_table   create_color_table(image)
 {
+	int i;
+	struct color_table colorTable;
 
+	colorTable.count = image_give_largeur(image);
+	colorTable.owner = true;
+	colorTable.table = malloc(colorTable.count*sizeof(int));
+
+	i = 0;
+	image_debut(image);
+	do
+    {
+		colorTable.table[i]  = image_lire_pixel(image);
+		i++;
+    }
+  	while(image_pixel_suivant(image));
+
+  	return colorTable;
 }
 
 boolean       destroy_color_table(color_table)
