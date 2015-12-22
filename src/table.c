@@ -14,13 +14,13 @@ color_table   create_color_table(image img)
 {
 	int i,j;
 	int * pix;
-	color_table colorTable;
+	color_table colorTable = malloc (sizeof (struct color_table));
 
-	colorTable.count = image_give_largeur(img);
-	colorTable.owner = true;
-	colorTable.table = malloc(3 * sizeof(int*));
+	colorTable->count = image_give_largeur(img);
+	colorTable->owner = true;
+	colorTable->table = malloc(3 * sizeof(int*));
 	for(j = 0; j < 3; j++){
-    	colorTable.table[j] = malloc(colorTable.count * sizeof(int));
+    	colorTable->table[j] = malloc(colorTable->count * sizeof(int));
   	}
 
 	i = 0;
@@ -29,7 +29,7 @@ color_table   create_color_table(image img)
     {
     	pix = image_lire_pixel(img);
     	for(j = 0; j < 3; j++){
-    		colorTable.table[j][i] = pix[j];
+    		colorTable->table[j][i] = pix[j];
   		}
 		i++;
     }

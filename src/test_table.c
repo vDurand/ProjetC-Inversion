@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 	image input = FAIRE_image();
 	image_charger(input,fichier);
 	cTable = create_color_table(input);
-	for (i = 0; i < cTable.count; i++){
-		printf("%d | %d | %d\n", cTable.table[0][i], cTable.table[1][i], cTable.table[2][i]);
+	for (i = 0; i < cTable->count; i++){
+		printf("%d | %d | %d\n", cTable->table[0][i], cTable->table[1][i], cTable->table[2][i]);
 	}
 	return 0;
 }

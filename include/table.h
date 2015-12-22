@@ -4,7 +4,7 @@
 typedef enum {red,green,blue} axis;
 typedef int color;
 typedef enum {false,true} boolean;
-typedef struct color_table color_table;
+typedef struct color_table *color_table;
 
 struct color_table {
    color**  table;
