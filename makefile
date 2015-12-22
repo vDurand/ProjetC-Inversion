@@ -1,19 +1,36 @@
+# Durand Valentin
+# Decembre 2015
+
 CC=gcc
-INC_DIR= include/
 CFLAGS= -Wall -pedantic -g
+
+# Folders
+REF=./
+SRC=$(REF)src/
+INC=$(REF)include/
+LIB=$(REF)lib/
+BIN=$(REF)bin/
+DOC=$(REF)doc/
 
 install: all clean
 
-all: invertion
+all: libimage test_table
 
-invertion: arbre.o table.o
-	$(CC) arbre.o table.o -o invertion
+# Compilation library image
+libimage: 
+	$(CC) -I$(INC) -o image.o $(SRC)image.c -c
+	ar -rv $(LIB)libimage.a image.o
 
-arbre.o: arbre.c arbre.h
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c arbre.c
+# Compilation des tests
+test_table: table.o test_table.o
+	$(CC) table.o test_table.o -o $(BIN)test_table -L$(LIB) -limage
 
-table.o: table.c table.h
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c table.c
+# Compilation des objets
+table.o: $(SRC)table.c
+	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)table.c
+
+test_table.o: $(SRC)test_table.c
+	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)test_table.c
 
 clean:
 	rm -f *.o
