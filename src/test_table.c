@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	color_table cTable;
+	color_table cTable, ssTable;
 	char *fichier = argv[1];
 	image input = FAIRE_image();
 	image_charger(input,fichier);
@@ -21,6 +21,13 @@ int main(int argc, char *argv[])
 	for (i = 0; i < cTable->count; i++){
 		printf("%d | %d | %d\n", cTable->table[0][i], cTable->table[1][i], cTable->table[2][i]);
 	}
+	printf("\n\n");
+	ssTable = color_table_duplicate(cTable, 2, 10);
+	for (i = 0; i < ssTable->count; i++){
+		printf("%d | %d | %d\n", ssTable->table[0][i], ssTable->table[1][i], ssTable->table[2][i]);
+	}
+	printf("cT : %d ; %d\nssT : %d ; %d\n", cTable->count, cTable->owner, ssTable->count, ssTable->owner);
+	destroy_color_table(ssTable);
 	destroy_color_table(cTable);
 	return 0;
 }
