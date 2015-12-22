@@ -54,7 +54,7 @@ boolean       destroy_color_table(color_table cTable)
   	for(i = 0; i < 3; i++){
     	cTable->table[i] = NULL;
   	}
-  	cTable->table = NULL;
+  	free(cTable->table);
   	free(cTable);
   	return false;
 }
@@ -62,7 +62,7 @@ boolean       destroy_color_table(color_table cTable)
 color_table   color_table_duplicate(color_table cTable, int offset, int length)
 {
 	color_table subTable = malloc (sizeof (struct color_table));
-	subTable->table = cTable->table;
+	subTable->table = malloc(3 * sizeof(int*));
 	subTable->table[0] = &cTable->table[0][offset];
 	subTable->table[1] = &cTable->table[1][offset];
 	subTable->table[2] = &cTable->table[2][offset];
@@ -70,12 +70,14 @@ color_table   color_table_duplicate(color_table cTable, int offset, int length)
 	subTable->owner = false;
 	return subTable;
 }
-/*
-void          color_table_get_color(color_table cTable, int a, color* b)
+
+void          color_table_get_color(color_table cTable, int index, color* foundColor)
 {
-
+	foundColor[0] = cTable->table[0][index];
+	foundColor[1] = cTable->table[1][index];
+	foundColor[2] = cTable->table[2][index];
 }
-
+/*
 int           color_table_get_nb_color(color_table cTable)
 {
 
