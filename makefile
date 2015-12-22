@@ -21,6 +21,10 @@ libimage:
 	$(CC) -I$(INC) -o image.o $(SRC)image.c -c
 	ar -rv $(LIB)libimage.a image.o
 
+# Compilation methode trivial
+trivial: table.o trivial.o
+	$(CC) table.o trivial.o -o $(BIN)trivial -L$(LIB) -limage
+
 # Compilation des tests
 test_table: table.o test_table.o
 	$(CC) table.o test_table.o -o $(BIN)test_table -L$(LIB) -limage
@@ -31,6 +35,9 @@ table.o: $(SRC)table.c
 
 test_table.o: $(SRC)test_table.c
 	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)test_table.c
+
+trivial.o: $(SRC)trivial.c
+	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)trivial.c
 
 clean:
 	rm -f *.o

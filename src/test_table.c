@@ -1,6 +1,6 @@
 /**
-* @file table.c
-* @brief 
+* @file test_table.c
+* @brief test des differents fonctions de table.c
 * @author Durand Valentin TP3 Informatique Promo 2018
 * @date Decembre 2015
 */
