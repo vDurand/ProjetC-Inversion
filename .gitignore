@@ -4,3 +4,5 @@ bin/test_table
 *.a
 
 *.o
+
+lib/libimage.a

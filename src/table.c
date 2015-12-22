@@ -40,9 +40,20 @@ color_table   create_color_table(image img)
 
 boolean       destroy_color_table(color_table cTable)
 {
+	int i;
 
+	for(i = 0; i < 3; i++){
+    	free(cTable->table[i]);
+  	}
+  	free(cTable->table);
+  	cTable->count = 0;
+  	if(cTable->owner){
+  		free(cTable);
+  		return true;
+  	}
+  	return false;
 }
-
+/*
 color_table   color_table_duplicate(color_table cTable, int a, int b)
 {
 
@@ -60,4 +71,4 @@ int           color_table_get_nb_color(color_table cTable)
 
 void          color_table_sort(color_table cTable, axis a){
 
-}
+}*/

@@ -21,5 +21,6 @@ int main(int argc, char *argv[])
 	for (i = 0; i < cTable->count; i++){
 		printf("%d | %d | %d\n", cTable->table[0][i], cTable->table[1][i], cTable->table[2][i]);
 	}
+	destroy_color_table(cTable);
 	return 0;
 }
