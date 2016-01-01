@@ -31,7 +31,11 @@ int main(int argc, char *argv[])
 	/* Creation de la table */
 	table = FAIRE_image();
 	image_charger(table,fichierTable);
+
+	assert(image_give_hauteur(table) == 1);
+
 	cTable = create_color_table(table);
+
 
 	image_debut(img);
 	do
@@ -68,6 +72,7 @@ int main(int argc, char *argv[])
   	while(image_pixel_suivant(img));
 
   	image_sauvegarder(img, "result.ppm");
+  	system("gnome-open result.ppm");
 
 	destroy_color_table(cTable);
 
