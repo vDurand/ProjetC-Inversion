@@ -6,3 +6,5 @@ bin/test_table
 *.o
 
 lib/libimage.a
+
+bin/trivial
