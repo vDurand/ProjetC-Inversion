@@ -30,7 +30,7 @@ test_table: table.o test_table.o
 	$(CC) table.o test_table.o -o $(BIN)test_table -L$(LIB) -limage
 
 test_arbre: table.o arbre.o test_arbre.o
-	$(CC) table.o arbre.o test_arbre.o -o $(BIN)test_arbre -L$(LIB) -limage
+	$(CC) table.o arbre.o test_arbre.o -o $(BIN)test_arbre -L$(LIB) -limage -lm
 
 # Compilation des objets
 table.o: $(SRC)table.c
@@ -46,7 +46,7 @@ arbre.o: $(SRC)arbre.c
 	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)arbre.c
 
 test_arbre.o: $(SRC)test_arbre.c
-	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)test_arbre.c
+	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)test_arbre.c -lm
 
 clean:
 	rm -f *.o

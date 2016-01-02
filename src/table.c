@@ -126,7 +126,7 @@ void color_table_get_color(color_table cTable, int index, color* foundColor)
 {
 	assert(cTable != NULL);
 	assert(index >= 0);
-	assert(index < cTable->count-1);
+	assert(index <= cTable->count-1);
 	assert(foundColor != NULL);
 
 	foundColor[red] = cTable->table[red][index];
