@@ -43,5 +43,7 @@ int main(int argc, char *argv[])
 
 	printTree(tree);
 
+	destroy_kdtree(tree);
+
 	return 0;
 }

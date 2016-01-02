@@ -59,7 +59,12 @@ kdtree create_kdtree(color_table cTable, int seuil)
 	}
 	return tree;
 }
-/*
-void destroy_kdtree(kdtree){
-	
-}*/
+
+void destroy_kdtree(kdtree tree){
+	if(tree == NULL)
+		return;
+	destroy_kdtree(tree->right_son);
+	destroy_kdtree(tree->left_son);
+	destroy_color_table(tree->colorTable);
+	free(tree);
+}
