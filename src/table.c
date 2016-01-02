@@ -100,7 +100,6 @@ color_table color_table_duplicate(color_table cTable, int offset, int length)
 	assert(cTable != NULL);
 	assert(offset >= 0);
 	assert(length > 0);
-	printf("%d <= %d\n", length+offset,cTable->count);
 	assert(length+offset <= cTable->count);
 
 	subTable->table = malloc(3 * sizeof(int*));

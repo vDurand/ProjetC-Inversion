@@ -10,6 +10,22 @@
 #include "image.h"
 #include "arbre.h"
 
+void printTree(kdtree t){
+	int i;
+	if(t == NULL)
+      return;
+    printf("%d : %d\n-----\n",color_table_get_nb_color(t -> colorTable), t -> sortAxis);
+    for (i = 0; i < color_table_get_nb_color(t -> colorTable); ++i)
+    {
+    	printf("%d | %d | %d\n", t -> colorTable->table[0][i], t -> colorTable->table[1][i], t -> colorTable->table[2][i]);
+    }
+ 	printf("-----\nl:");
+    printTree(t -> left_son);
+    printf("r:");
+    printTree(t ->right_son);
+    printf("\n");
+}
+
 int main(int argc, char *argv[])
 {
 	color_table cTable;
@@ -23,7 +39,9 @@ int main(int argc, char *argv[])
 	/* Creation de la table */
 	cTable = create_color_table(input);
 
-	tree = create_kdtree(cTable, 10);
+	tree = create_kdtree(cTable, 3);
+
+	printTree(tree);
 
 	return 0;
 }
