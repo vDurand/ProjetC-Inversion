@@ -15,5 +15,6 @@ struct kdtree
 
 kdtree create_kdtree(color_table,int);
 void   destroy_kdtree(kdtree);
+void   kdtree_get_nearest_color(kdtree,color*, color*);
 
 #endif

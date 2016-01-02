@@ -68,3 +68,8 @@ void destroy_kdtree(kdtree tree){
 	destroy_color_table(tree->colorTable);
 	free(tree);
 }
+
+void kdtree_get_nearest_color(kdtree tree, color *inputColor, color *outputColor)
+{
+	
+}
