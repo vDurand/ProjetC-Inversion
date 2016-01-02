@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	/* Creation de la table */
 	cTable = create_color_table(input);
 
-	tree = create_kdtree(cTable, 3);
+	tree = create_kdtree(cTable, 5);
 
 	printTree(tree);
 

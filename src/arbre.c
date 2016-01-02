@@ -7,12 +7,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "image.h"
 #include "arbre.h"
 
-kdtree create_kdtree(color_table cTable, int seuil)
+axis choose_sorting_axis(color_table cTable)
 {
-	color_table rightTable, leftTable;
-	kdtree tree = malloc (sizeof (struct kdtree));
 	axis axisChoice;
 	axisChoice = (
 				 color_table_get_max(cTable, red) - color_table_get_min(cTable, red)
@@ -26,14 +25,29 @@ kdtree create_kdtree(color_table cTable, int seuil)
 		color_table_get_max(cTable, axisChoice) - color_table_get_min(cTable, axisChoice)
 		)
 		{axisChoice = blue;}
+	return axisChoice;
+}
 
-	tree->sortAxis = axisChoice;
+int choose_axis_position(color_table cTable, axis sortingAxis)
+{
+	int positionAxis;
+	positionAxis = color_table_get_nb_color(cTable)/2-1;
+	while(cTable->table[sortingAxis][positionAxis] == cTable->table[sortingAxis][++positionAxis]);
+	return positionAxis;
+}
+
+kdtree create_kdtree(color_table cTable, int seuil)
+{
+	color_table rightTable, leftTable;
+	kdtree tree = malloc (sizeof (struct kdtree));
+	
+	tree->sortAxis = choose_sorting_axis(cTable);
 
 	color_table_sort(cTable, tree->sortAxis);
 	
 	tree->colorTable = cTable;
-	tree->positionAxis = color_table_get_nb_color(cTable)/2;
-	if(tree->positionAxis >= seuil){
+	tree->positionAxis = choose_axis_position(cTable, tree->sortAxis);
+	if(tree->positionAxis >= seuil || (color_table_get_nb_color(cTable) - tree->positionAxis) >= seuil){
 		rightTable = color_table_duplicate(
 										  cTable,
 										  tree->positionAxis,
