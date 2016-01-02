@@ -18,5 +18,7 @@ color_table   color_table_duplicate(color_table,int,int);
 void          color_table_get_color(color_table,int,color*);
 int           color_table_get_nb_color(color_table);
 void          color_table_sort(color_table,axis);
+color         color_table_get_min(color_table,axis);
+color         color_table_get_max(color_table,axis);
 
 #endif

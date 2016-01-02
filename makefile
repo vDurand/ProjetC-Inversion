@@ -29,8 +29,8 @@ trivial: table.o trivial.o
 test_table: table.o test_table.o
 	$(CC) table.o test_table.o -o $(BIN)test_table -L$(LIB) -limage
 
-test_arbre: arbre.o test_arbre.o
-	$(CC) arbre.o test_arbre.o -o $(BIN)test_arbre -L$(LIB) -limage
+test_arbre: table.o arbre.o test_arbre.o
+	$(CC) table.o arbre.o test_arbre.o -o $(BIN)test_arbre -L$(LIB) -limage
 
 # Compilation des objets
 table.o: $(SRC)table.c
