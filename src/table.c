@@ -100,7 +100,7 @@ color_table color_table_duplicate(color_table cTable, int offset, int length)
 	assert(cTable != NULL);
 	assert(offset >= 0);
 	assert(length > 0);
-	assert(length+offset < cTable->count);
+	assert(length+offset <= cTable->count);
 
 	subTable->table = malloc(3 * sizeof(int*));
 	
@@ -172,4 +172,31 @@ void color_table_sort(color_table cTable, axis sortingAxis)
 			}
 		}
 	}
+}
+
+
+color color_table_get_min(color_table cTable, axis sortingAxis)
+{
+	int i, min;
+
+	min = cTable->table[sortingAxis][0];
+	for (i = 1; i < cTable->count; ++i){
+		if(cTable->table[sortingAxis][i] < min)
+			min = cTable->table[sortingAxis][i];
+	}
+
+	return min;
+}
+
+color color_table_get_max(color_table cTable, axis sortingAxis)
+{
+	int i, max;
+
+	max = cTable->table[sortingAxis][0];
+	for (i = 1; i < cTable->count; ++i){
+		if(cTable->table[sortingAxis][i] > max)
+			max = cTable->table[sortingAxis][i];
+	}
+
+	return max;
 }
