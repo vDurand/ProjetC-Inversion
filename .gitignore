@@ -8,3 +8,5 @@ bin/test_table
 lib/libimage.a
 
 bin/trivial
+
+bin/inversion

@@ -14,7 +14,7 @@ DOC=$(REF)doc/
 
 install: all clean
 
-all: libimage test_arbre
+all: libimage inversion
 
 # Compilation library image
 libimage: 
@@ -24,6 +24,10 @@ libimage:
 # Compilation methode trivial
 trivial: table.o trivial.o
 	$(CC) table.o trivial.o -o $(BIN)trivial -L$(LIB) -limage -lm
+
+# Compilation inversion avec arbre
+inversion: table.o arbre.o inversion.o
+	$(CC) table.o arbre.o inversion.o -o $(BIN)inversion -L$(LIB) -limage -lm
 
 # Compilation des tests
 test_table: table.o test_table.o
@@ -41,6 +45,9 @@ test_table.o: $(SRC)test_table.c
 
 trivial.o: $(SRC)trivial.c
 	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)trivial.c -lm
+
+inversion.o: $(SRC)inversion.c
+	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)inversion.c
 
 arbre.o: $(SRC)arbre.c
 	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)arbre.c

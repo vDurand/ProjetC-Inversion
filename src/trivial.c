@@ -71,8 +71,8 @@ int main(int argc, char *argv[])
     }
   	while(image_pixel_suivant(img));
 
-  	image_sauvegarder(img, "result.ppm");
-  	system("gnome-open result.ppm");
+  	image_sauvegarder(img, "resultat-trivial.ppm");
+  	system("gnome-open resultat-trivial.ppm");
 
 	destroy_color_table(cTable);
 
