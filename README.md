@@ -1,4 +1,4 @@
-# ProjetC-Invertion
+# ProjetC-Inversion
 Projet Programmation C - Traitement Image et Couleur
 
 _1A Ensicaen 2015 - 2016_
