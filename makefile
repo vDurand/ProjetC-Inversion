@@ -29,6 +29,10 @@ trivial: table.o trivial.o
 inversion: table.o arbre.o inversion.o
 	$(CC) table.o arbre.o inversion.o -o $(BIN)inversion -L$(LIB) -limage -lm
 
+# Compilation temps d execution
+graphdata: table.o arbre.o graphdata.o
+	$(CC) table.o arbre.o graphdata.o -o $(BIN)graphdata -L$(LIB) -limage -lm
+
 # Compilation des tests
 test_table: table.o test_table.o
 	$(CC) table.o test_table.o -o $(BIN)test_table -L$(LIB) -limage
@@ -48,6 +52,9 @@ trivial.o: $(SRC)trivial.c
 
 inversion.o: $(SRC)inversion.c
 	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)inversion.c
+
+graphdata.o: $(SRC)graphdata.c
+	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)graphdata.c
 
 arbre.o: $(SRC)arbre.c
 	$(CC) $(CFLAGS) -I$(INC) -c $(SRC)arbre.c

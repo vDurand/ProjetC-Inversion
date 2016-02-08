@@ -3,10 +3,13 @@
 
 #include "table.h"
 
-typedef struct {
+typedef struct cutting_plane *cutting_plane;
+
+struct cutting_plane
+{
 	int position;
 	int value;
-} cutting_plane;
+};
 
 typedef  struct kdtree *kdtree;
 

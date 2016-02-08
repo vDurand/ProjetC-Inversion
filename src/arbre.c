@@ -45,29 +45,31 @@ kdtree create_kdtree(color_table cTable, int seuil)
 {
 	color_table rightTable, leftTable;
 	kdtree tree = malloc (sizeof (struct kdtree));
+	cutting_plane cplane = malloc (sizeof (struct cutting_plane));
 	
 	tree->sortAxis = choose_sorting_axis(cTable);
 
 	color_table_sort(cTable, tree->sortAxis);
 	
 	tree->colorTable = cTable;
-	tree->cuttingPlane.position = choose_axis_position(cTable, tree->sortAxis);
-	tree->cuttingPlane.value = (cTable->table[tree->sortAxis][choose_axis_position(cTable, tree->sortAxis)]
+	cplane->position = choose_axis_position(cTable, tree->sortAxis);
+	cplane->value = (cTable->table[tree->sortAxis][choose_axis_position(cTable, tree->sortAxis)]
 								+ cTable->table[tree->sortAxis][choose_axis_position(cTable, tree->sortAxis)-1])
 								/2;
-	if(tree->cuttingPlane.position >= seuil || (color_table_get_nb_color(cTable) - tree->cuttingPlane.position) >= seuil){
+	tree->cuttingPlane = cplane;
+	if(tree->cuttingPlane->position >= seuil || (color_table_get_nb_color(cTable) - tree->cuttingPlane->position) >= seuil){
 		rightTable = color_table_duplicate(
 										  cTable,
-										  tree->cuttingPlane.position,
-										  color_table_get_nb_color(cTable) - tree->cuttingPlane.position
+										  tree->cuttingPlane->position,
+										  color_table_get_nb_color(cTable) - tree->cuttingPlane->position
 										  );
-		leftTable = color_table_duplicate(cTable, 0, tree->cuttingPlane.position);
+		leftTable = color_table_duplicate(cTable, 0, tree->cuttingPlane->position);
 		tree->right_son = create_kdtree(rightTable, seuil);
 		tree->left_son = create_kdtree(leftTable, seuil);
 	}
 	else{
-		tree->cuttingPlane.position = -1;
-		tree->cuttingPlane.value = -1;
+		tree->cuttingPlane->position = -1;
+		tree->cuttingPlane->value = -1;
 		tree->sortAxis = -1;
 	}
 	return tree;
@@ -79,6 +81,7 @@ void destroy_kdtree(kdtree tree){
 	destroy_kdtree(tree->right_son);
 	destroy_kdtree(tree->left_son);
 	destroy_color_table(tree->colorTable);
+	free(tree->cuttingPlane);
 	free(tree);
 }
 
@@ -121,16 +124,16 @@ void kdtree_get_nearest_color(kdtree tree, color *inputColor, color *outputColor
 		return;
 	}
 
-	if(inputColor[tree->sortAxis] <= tree->cuttingPlane.value)
+	if(inputColor[tree->sortAxis] <= tree->cuttingPlane->value)
 		kdtree_get_nearest_color(tree->left_son, inputColor, outputColor);
 
-	if(inputColor[tree->sortAxis] > tree->cuttingPlane.value)
+	if(inputColor[tree->sortAxis] > tree->cuttingPlane->value)
 		kdtree_get_nearest_color(tree->right_son, inputColor, outputColor);
 
 	colorOnPlane[red] = inputColor[red];
 	colorOnPlane[green] = inputColor[green];
 	colorOnPlane[blue] = inputColor[blue];
-	colorOnPlane[tree->sortAxis] = tree->cuttingPlane.value;
+	colorOnPlane[tree->sortAxis] = tree->cuttingPlane->value;
 	if(get_distance_between_colors(inputColor, colorOnPlane) < get_distance_between_colors(inputColor, outputColor)){
 		search_nearest_color_in_node(tree, inputColor, outputColor);
 	}
