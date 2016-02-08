@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
+#include <time.h>
 #include "image.h"
 #include "table.h"
 
@@ -16,13 +18,17 @@ int main(int argc, char *argv[])
 	int i, *pix;
 	int closest[3];
 	color_table cTable;
-	char *fichierImg, *fichierTable;
+	char *fichierImg, *fichierTable, *end, *exec;
+    clock_t debut;
+    double temps;
 	image img, table;
 
 	assert(argc == 3);
 
 	fichierImg = argv[1];
 	fichierTable = argv[2];
+
+    end = fichierImg + strlen(fichierImg) - 4;
 
 	/* Creation image */
 	img = FAIRE_image();
@@ -36,6 +42,8 @@ int main(int argc, char *argv[])
 
 	cTable = create_color_table(table);
 
+    printf("Beginning inversion with trivial method...\n");
+    debut = clock();
 
 	image_debut(img);
 	do
@@ -71,8 +79,19 @@ int main(int argc, char *argv[])
     }
   	while(image_pixel_suivant(img));
 
-  	image_sauvegarder(img, "resultat-trivial.ppm");
-  	system("gnome-open resultat-trivial.ppm");
+    temps = (double)(clock() - debut) / CLOCKS_PER_SEC;
+    printf("Inversion completed successfully in %f s.\n", temps);
+
+    strcpy(end, "_resultInversionByTrivial.ppm");
+    image_sauvegarder(img, fichierImg);
+
+    printf("Result picture saved : %s\n", fichierImg);
+
+    exec = malloc(strlen(fichierImg) + 12);
+    strcpy(exec, "gnome-open ");
+    strcat(exec, fichierImg);
+    system(exec);
+    free(exec);
 
 	destroy_color_table(cTable);
 
