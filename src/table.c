@@ -1,9 +1,9 @@
 /**
-* @file table.c
-* @author Durand Valentin TP3 Informatique Promo 2018
-* @date Decembre 2015
-* @brief Fonctions pour les tables
-*/
+ * @file table.c
+ * @author Durand Valentin TP3 Informatique Promo 2018
+ * @date Decembre 2015
+ * @brief Fonctions pour les tables de couleurs
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,6 +11,7 @@
 #include "table.h"
 
 /**
+ * public
  * @name    create_color_table
  * @brief   La fonction cree une table a partir d’une image composee d’une seule ligne.
  * @param img image a partir de laquelle on cree la table de couleur
@@ -49,6 +50,7 @@ color_table create_color_table(image img)
 }
 
 /**
+ * public
  * @name    destroy_color_table
  * @brief   La fonction supprime une table de couleur.
  * @param cTable la table de couleur a supprimer
@@ -84,6 +86,7 @@ boolean destroy_color_table(color_table cTable)
 }
 
 /**
+ * public
  * @name    color_table_duplicate
  * @brief   La fonction cree une sous table.
  * @param cTable table de couleur mere
@@ -115,6 +118,7 @@ color_table color_table_duplicate(color_table cTable, int offset, int length)
 }
 
 /**
+ * public
  * @name    color_table_get_color
  * @brief   La fonction donne la couleur rgb a une position precise dans la table de couleur.
  * @param cTable table de couleur dans laquel on veut trouver la couleur
@@ -135,6 +139,7 @@ void color_table_get_color(color_table cTable, int index, color* foundColor)
 }
 
 /**
+ * public
  * @name    color_table_get_nb_color
  * @brief   La fonction donne le nombre de couleurs dans la table de couleur.
  * @param cTable table dont on veut le nombre de couleur
@@ -146,12 +151,12 @@ int color_table_get_nb_color(color_table cTable)
 }
 
 /**
+ * public
  * @name    color_table_sort
  * @brief   La fonction trie les elements d’une table de couleur par ordre croissant en fonction de leurs coodonnees sur un axe
  * @param cTable table de couleur a trier
  * @param sortingAxis axe RGB utilise pour le tri
  * @return rien
- * 0 pour l’axe rouge, 1 pour le vert, et 2 pour le bleu
  */
 void color_table_sort(color_table cTable, axis sortingAxis)
 {
@@ -174,7 +179,14 @@ void color_table_sort(color_table cTable, axis sortingAxis)
 	}
 }
 
-
+/**
+ * public
+ * @name    color_table_get_min
+ * @brief   La fonction retourne la couleur la plus faible pour un axe rgb donné
+ * @param cTable table de couleur dont on cherche le minimum
+ * @param sortingAxis axe RGB utilise pour chercher le minimum
+ * @return la couleur la plus petite trouvee
+ */
 color color_table_get_min(color_table cTable, axis sortingAxis)
 {
 	int i, min;
@@ -188,6 +200,14 @@ color color_table_get_min(color_table cTable, axis sortingAxis)
 	return min;
 }
 
+/**
+ * public
+ * @name    color_table_get_max
+ * @brief   La fonction retourne la couleur la plus grande pour un axe rgb donné
+ * @param cTable table de couleur dont on cherche le maximum
+ * @param sortingAxis axe RGB utilise pour chercher le maximum
+ * @return la couleur la plus grande trouvee
+ */
 color color_table_get_max(color_table cTable, axis sortingAxis)
 {
 	int i, max;

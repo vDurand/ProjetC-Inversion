@@ -1,9 +1,9 @@
 /**
-* @file graphdata.c
-* @brief 
-* @author Durand Valentin TP3 Informatique Promo 2018
-* @date Decembre 2015
-*/
+ * @file graphdata.c
+ * @brief Sauvegarde les temps d execution pour l inversion d une image par methode triviale et kd arbre
+ * @author Durand Valentin TP3 Informatique Promo 2018
+ * @date Janvier 2016
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
 	else
 		threshold = 10;
 
-	fp = fopen("datadump.txt", "w");
+	fp = fopen("datadump", "w");
 
 	for (i = 0; i < 4; ++i)
 	{
