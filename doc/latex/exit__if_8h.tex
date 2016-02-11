@@ -1,0 +1,26 @@
+\hypertarget{exit__if_8h}{\section{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/include/exit\-\_\-if.h File Reference}
+\label{exit__if_8h}\index{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/include/exit\-\_\-if.\-h@{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/include/exit\-\_\-if.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{exit__if_8h_a5e3b01b6180dc1ef992657060e89d90e}{E\-X\-I\-T\-\_\-\-I\-F}(expr, mess, type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{exit__if_8h_a5e3b01b6180dc1ef992657060e89d90e}{\index{exit\-\_\-if.\-h@{exit\-\_\-if.\-h}!E\-X\-I\-T\-\_\-\-I\-F@{E\-X\-I\-T\-\_\-\-I\-F}}
+\index{E\-X\-I\-T\-\_\-\-I\-F@{E\-X\-I\-T\-\_\-\-I\-F}!exit_if.h@{exit\-\_\-if.\-h}}
+\subsubsection[{E\-X\-I\-T\-\_\-\-I\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-I\-T\-\_\-\-I\-F(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{mess, }
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}}\label{exit__if_8h_a5e3b01b6180dc1ef992657060e89d90e}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+((expr)\(\backslash\)
+? (fprintf(stderr,\textcolor{stringliteral}{">EXIT:%s:%d: %s %s\(\backslash\)n"},\_\_FILE\_\_,\_\_LINE\_\_,mess,type),exit(1)) :0)
+\end{DoxyCode}

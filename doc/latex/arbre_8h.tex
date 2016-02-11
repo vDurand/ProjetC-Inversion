@@ -1,0 +1,125 @@
+\hypertarget{arbre_8h}{\section{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/include/arbre.h File Reference}
+\label{arbre_8h}\index{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/include/arbre.\-h@{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/include/arbre.\-h}}
+}
+
+
+Structures et headers des fonctions pour les kd arbres.  
+
+
+{\ttfamily \#include \char`\"{}table.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcutting__plane}{cutting\-\_\-plane}
+\begin{DoxyCompactList}\small\item\em structure permettant de stocker les donnes du plan de coupe \end{DoxyCompactList}\item 
+struct \hyperlink{structkdtree}{kdtree}
+\begin{DoxyCompactList}\small\item\em structure permettant de stocker les donnes des noeuds de l arbre \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structcutting__plane}{cutting\-\_\-plane} $\ast$ \hyperlink{arbre_8h_a84cf26911a46f25481e35b72a4f90f99}{cutting\-\_\-plane}
+\begin{DoxyCompactList}\small\item\em pointeur de structure \hyperlink{structcutting__plane}{cutting\-\_\-plane} \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structkdtree}{kdtree} $\ast$ \hyperlink{arbre_8h_afc2bf97da9edbe04fc22531f395828d9}{kdtree}
+\begin{DoxyCompactList}\small\item\em pointeur de structure kdtree \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf create\-\_\-kdtree}\par
+{\em La fonction cree le kd arbre de tri
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur a decouper en kd arbre \\
+\hline
+{\em seuil} & le nombre minimum de couleur dans une feuille de l arbre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+kdtree pointer sur la racine de l arbre 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structkdtree}{kdtree} \hyperlink{arbre_8h_ab52044e2e04526a62b398e785ca50dc1}{create\-\_\-kdtree} (\hyperlink{structcolor__table}{color\-\_\-table}, int)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf destroy\-\_\-kdtree}\par
+{\em La fonction supprime le kd arbre et ses fils
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & l arbre a detruire \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{arbre_8h_ada0da5f4c35bfc7e909916c635021c67}{destroy\-\_\-kdtree} (\hyperlink{structkdtree}{kdtree})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf kdtree\-\_\-get\-\_\-nearest\-\_\-color}\par
+{\em La fonction cherche la couleur la plus proche dans tout l arbre
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & la racine de l arbre de recherche \\
+\hline
+{\em input\-Color} & la couleur d origine dont on cherche la plus proche \\
+\hline
+{\em output\-Color} & la couleur la plus proche trouvee \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{arbre_8h_ac5efd70d3adb4899423663dc1e4443f1}{kdtree\-\_\-get\-\_\-nearest\-\_\-color} (\hyperlink{structkdtree}{kdtree}, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Structures et headers des fonctions pour les kd arbres. \begin{DoxyAuthor}{Author}
+Durand Valentin T\-P3 Informatique Promo 2018 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Janvier 2016 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{arbre_8h_a84cf26911a46f25481e35b72a4f90f99}{\index{arbre.\-h@{arbre.\-h}!cutting\-\_\-plane@{cutting\-\_\-plane}}
+\index{cutting\-\_\-plane@{cutting\-\_\-plane}!arbre.h@{arbre.\-h}}
+\subsubsection[{cutting\-\_\-plane}]{\setlength{\rightskip}{0pt plus 5cm}cutting\-\_\-plane\-::cutting\-Plane pointeur sur structure {\bf cutting\-\_\-plane}}}\label{arbre_8h_a84cf26911a46f25481e35b72a4f90f99}
+
+
+pointeur de structure \hyperlink{structcutting__plane}{cutting\-\_\-plane} 
+
+\hypertarget{arbre_8h_afc2bf97da9edbe04fc22531f395828d9}{\index{arbre.\-h@{arbre.\-h}!kdtree@{kdtree}}
+\index{kdtree@{kdtree}!arbre.h@{arbre.\-h}}
+\subsubsection[{kdtree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kdtree}}}\label{arbre_8h_afc2bf97da9edbe04fc22531f395828d9}
+
+
+pointeur de structure kdtree 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{arbre_8h_ab52044e2e04526a62b398e785ca50dc1}{\index{arbre.\-h@{arbre.\-h}!create\-\_\-kdtree@{create\-\_\-kdtree}}
+\index{create\-\_\-kdtree@{create\-\_\-kdtree}!arbre.h@{arbre.\-h}}
+\subsubsection[{create\-\_\-kdtree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kdtree} create\-\_\-kdtree (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{arbre_8h_ab52044e2e04526a62b398e785ca50dc1}
+\hypertarget{arbre_8h_ada0da5f4c35bfc7e909916c635021c67}{\index{arbre.\-h@{arbre.\-h}!destroy\-\_\-kdtree@{destroy\-\_\-kdtree}}
+\index{destroy\-\_\-kdtree@{destroy\-\_\-kdtree}!arbre.h@{arbre.\-h}}
+\subsubsection[{destroy\-\_\-kdtree}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\-\_\-kdtree (
+\begin{DoxyParamCaption}
+\item[{{\bf kdtree}}]{}
+\end{DoxyParamCaption}
+)}}\label{arbre_8h_ada0da5f4c35bfc7e909916c635021c67}
+\hypertarget{arbre_8h_ac5efd70d3adb4899423663dc1e4443f1}{\index{arbre.\-h@{arbre.\-h}!kdtree\-\_\-get\-\_\-nearest\-\_\-color@{kdtree\-\_\-get\-\_\-nearest\-\_\-color}}
+\index{kdtree\-\_\-get\-\_\-nearest\-\_\-color@{kdtree\-\_\-get\-\_\-nearest\-\_\-color}!arbre.h@{arbre.\-h}}
+\subsubsection[{kdtree\-\_\-get\-\_\-nearest\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}void kdtree\-\_\-get\-\_\-nearest\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{{\bf kdtree}}]{, }
+\item[{{\bf color} $\ast$}]{, }
+\item[{{\bf color} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{arbre_8h_ac5efd70d3adb4899423663dc1e4443f1}

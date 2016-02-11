@@ -1,0 +1,218 @@
+\contentsline {chapter}{\numberline {1}Data Structure Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Data Structures}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Data Structure Documentation}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}color\discretionary {-}{}{}\_\discretionary {-}{}{}table Struct Reference}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Field Documentation}{5}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}count}{5}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}owner}{5}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.3}table}{5}{subsubsection.3.1.2.3}
+\contentsline {section}{\numberline {3.2}cutting\discretionary {-}{}{}\_\discretionary {-}{}{}plane Struct Reference}{5}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Field Documentation}{6}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}position}{6}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}value}{6}{subsubsection.3.2.2.2}
+\contentsline {section}{\numberline {3.3}image Struct Reference}{6}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Field Documentation}{6}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}courant}{6}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}debut}{6}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}dim}{6}{subsubsection.3.3.1.3}
+\contentsline {subsubsection}{\numberline {3.3.1.4}distance}{6}{subsubsection.3.3.1.4}
+\contentsline {subsubsection}{\numberline {3.3.1.5}hauteur}{6}{subsubsection.3.3.1.5}
+\contentsline {subsubsection}{\numberline {3.3.1.6}largeur}{6}{subsubsection.3.3.1.6}
+\contentsline {subsubsection}{\numberline {3.3.1.7}longueur}{6}{subsubsection.3.3.1.7}
+\contentsline {subsubsection}{\numberline {3.3.1.8}taille}{6}{subsubsection.3.3.1.8}
+\contentsline {section}{\numberline {3.4}kdtree Struct Reference}{7}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{7}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Field Documentation}{7}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}color\discretionary {-}{}{}Table}{7}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}cutting\discretionary {-}{}{}Plane}{7}{subsubsection.3.4.2.2}
+\contentsline {subsubsection}{\numberline {3.4.2.3}left\discretionary {-}{}{}\_\discretionary {-}{}{}son}{7}{subsubsection.3.4.2.3}
+\contentsline {subsubsection}{\numberline {3.4.2.4}right\discretionary {-}{}{}\_\discretionary {-}{}{}son}{7}{subsubsection.3.4.2.4}
+\contentsline {subsubsection}{\numberline {3.4.2.5}sort\discretionary {-}{}{}Axis}{7}{subsubsection.3.4.2.5}
+\contentsline {section}{\numberline {3.5}point Struct Reference}{7}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Field Documentation}{7}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}coordx}{7}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}coordy}{7}{subsubsection.3.5.1.2}
+\contentsline {chapter}{\numberline {4}File Documentation}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/arbre.h File Reference}{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{10}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Typedef Documentation}{10}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}cutting\discretionary {-}{}{}\_\discretionary {-}{}{}plane}{10}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}kdtree}{10}{subsubsection.4.1.2.2}
+\contentsline {subsection}{\numberline {4.1.3}Function Documentation}{10}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}create\discretionary {-}{}{}\_\discretionary {-}{}{}kdtree}{10}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}destroy\discretionary {-}{}{}\_\discretionary {-}{}{}kdtree}{10}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}kdtree\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}nearest\discretionary {-}{}{}\_\discretionary {-}{}{}color}{10}{subsubsection.4.1.3.3}
+\contentsline {section}{\numberline {4.2}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/classe.h File Reference}{10}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Macro Definition Documentation}{11}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}C\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}S\discretionary {-}{}{}E}{11}{subsubsection.4.2.1.1}
+\contentsline {section}{\numberline {4.3}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/exit\discretionary {-}{}{}\_\discretionary {-}{}{}if.h File Reference}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Macro Definition Documentation}{11}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}E\discretionary {-}{}{}X\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}F}{11}{subsubsection.4.3.1.1}
+\contentsline {section}{\numberline {4.4}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/image.h File Reference}{11}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Typedef Documentation}{12}{subsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1.1}P\discretionary {-}{}{}Fdist}{12}{subsubsection.4.4.1.1}
+\contentsline {subsection}{\numberline {4.4.2}Function Documentation}{12}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}C\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}S\discretionary {-}{}{}E}{12}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}image}{12}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}F\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}image}{12}{subsubsection.4.4.2.3}
+\contentsline {subsubsection}{\numberline {4.4.2.4}image\discretionary {-}{}{}\_\discretionary {-}{}{}charger}{12}{subsubsection.4.4.2.4}
+\contentsline {subsubsection}{\numberline {4.4.2.5}image\discretionary {-}{}{}\_\discretionary {-}{}{}debut}{12}{subsubsection.4.4.2.5}
+\contentsline {subsubsection}{\numberline {4.4.2.6}image\discretionary {-}{}{}\_\discretionary {-}{}{}distance}{12}{subsubsection.4.4.2.6}
+\contentsline {subsubsection}{\numberline {4.4.2.7}image\discretionary {-}{}{}\_\discretionary {-}{}{}ecrire\discretionary {-}{}{}\_\discretionary {-}{}{}pixel}{12}{subsubsection.4.4.2.7}
+\contentsline {subsubsection}{\numberline {4.4.2.8}image\discretionary {-}{}{}\_\discretionary {-}{}{}give\discretionary {-}{}{}\_\discretionary {-}{}{}dim}{12}{subsubsection.4.4.2.8}
+\contentsline {subsubsection}{\numberline {4.4.2.9}image\discretionary {-}{}{}\_\discretionary {-}{}{}give\discretionary {-}{}{}\_\discretionary {-}{}{}hauteur}{12}{subsubsection.4.4.2.9}
+\contentsline {subsubsection}{\numberline {4.4.2.10}image\discretionary {-}{}{}\_\discretionary {-}{}{}give\discretionary {-}{}{}\_\discretionary {-}{}{}largeur}{12}{subsubsection.4.4.2.10}
+\contentsline {subsubsection}{\numberline {4.4.2.11}image\discretionary {-}{}{}\_\discretionary {-}{}{}initialize}{12}{subsubsection.4.4.2.11}
+\contentsline {subsubsection}{\numberline {4.4.2.12}image\discretionary {-}{}{}\_\discretionary {-}{}{}lire\discretionary {-}{}{}\_\discretionary {-}{}{}pixel}{12}{subsubsection.4.4.2.12}
+\contentsline {subsubsection}{\numberline {4.4.2.13}image\discretionary {-}{}{}\_\discretionary {-}{}{}move\discretionary {-}{}{}\_\discretionary {-}{}{}to}{12}{subsubsection.4.4.2.13}
+\contentsline {subsubsection}{\numberline {4.4.2.14}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}dessous}{12}{subsubsection.4.4.2.14}
+\contentsline {subsubsection}{\numberline {4.4.2.15}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}dessus}{12}{subsubsection.4.4.2.15}
+\contentsline {subsubsection}{\numberline {4.4.2.16}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}droite}{12}{subsubsection.4.4.2.16}
+\contentsline {subsubsection}{\numberline {4.4.2.17}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}gauche}{12}{subsubsection.4.4.2.17}
+\contentsline {subsubsection}{\numberline {4.4.2.18}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}suivant}{12}{subsubsection.4.4.2.18}
+\contentsline {subsubsection}{\numberline {4.4.2.19}image\discretionary {-}{}{}\_\discretionary {-}{}{}sauvegarder}{12}{subsubsection.4.4.2.19}
+\contentsline {subsubsection}{\numberline {4.4.2.20}image\discretionary {-}{}{}\_\discretionary {-}{}{}set\discretionary {-}{}{}\_\discretionary {-}{}{}distance}{12}{subsubsection.4.4.2.20}
+\contentsline {subsubsection}{\numberline {4.4.2.21}image\discretionary {-}{}{}\_\discretionary {-}{}{}to\discretionary {-}{}{}\_\discretionary {-}{}{}stream}{12}{subsubsection.4.4.2.21}
+\contentsline {section}{\numberline {4.5}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/move\discretionary {-}{}{}\_\discretionary {-}{}{}type.h File Reference}{13}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Macro Definition Documentation}{13}{subsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.1.1}D\discretionary {-}{}{}O\discretionary {-}{}{}W\discretionary {-}{}{}N}{13}{subsubsection.4.5.1.1}
+\contentsline {subsubsection}{\numberline {4.5.1.2}L\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}T}{13}{subsubsection.4.5.1.2}
+\contentsline {subsubsection}{\numberline {4.5.1.3}N\discretionary {-}{}{}B\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}O\discretionary {-}{}{}V\discretionary {-}{}{}E}{13}{subsubsection.4.5.1.3}
+\contentsline {subsubsection}{\numberline {4.5.1.4}R\discretionary {-}{}{}I\discretionary {-}{}{}G\discretionary {-}{}{}H\discretionary {-}{}{}T}{13}{subsubsection.4.5.1.4}
+\contentsline {subsubsection}{\numberline {4.5.1.5}U\discretionary {-}{}{}P}{13}{subsubsection.4.5.1.5}
+\contentsline {subsection}{\numberline {4.5.2}Typedef Documentation}{13}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}move\discretionary {-}{}{}\_\discretionary {-}{}{}type}{13}{subsubsection.4.5.2.1}
+\contentsline {subsection}{\numberline {4.5.3}Function Documentation}{13}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}move\discretionary {-}{}{}\_\discretionary {-}{}{}type\discretionary {-}{}{}\_\discretionary {-}{}{}compute\discretionary {-}{}{}\_\discretionary {-}{}{}dist\discretionary {-}{}{}\_\discretionary {-}{}{}sigma\discretionary {-}{}{}\_\discretionary {-}{}{}1}{13}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}move\discretionary {-}{}{}\_\discretionary {-}{}{}type\discretionary {-}{}{}\_\discretionary {-}{}{}compute\discretionary {-}{}{}\_\discretionary {-}{}{}step\discretionary {-}{}{}\_\discretionary {-}{}{}clock}{13}{subsubsection.4.5.3.2}
+\contentsline {section}{\numberline {4.6}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/objet.h File Reference}{13}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Macro Definition Documentation}{14}{subsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.1.1}I\discretionary {-}{}{}N\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}C\discretionary {-}{}{}I\discretionary {-}{}{}E\discretionary {-}{}{}R}{14}{subsubsection.4.6.1.1}
+\contentsline {subsubsection}{\numberline {4.6.1.2}S\discretionary {-}{}{}E\discretionary {-}{}{}L\discretionary {-}{}{}F}{14}{subsubsection.4.6.1.2}
+\contentsline {section}{\numberline {4.7}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/point.h File Reference}{14}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Macro Definition Documentation}{14}{subsection.4.7.1}
+\contentsline {subsubsection}{\numberline {4.7.1.1}A\discretionary {-}{}{}F\discretionary {-}{}{}F\discretionary {-}{}{}E\discretionary {-}{}{}C\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{14}{subsubsection.4.7.1.1}
+\contentsline {subsubsection}{\numberline {4.7.1.2}C\discretionary {-}{}{}O\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}D\discretionary {-}{}{}X}{15}{subsubsection.4.7.1.2}
+\contentsline {subsubsection}{\numberline {4.7.1.3}C\discretionary {-}{}{}O\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}D\discretionary {-}{}{}Y}{15}{subsubsection.4.7.1.3}
+\contentsline {subsubsection}{\numberline {4.7.1.4}E\discretionary {-}{}{}G\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.4}
+\contentsline {subsubsection}{\numberline {4.7.1.5}I\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.5}
+\contentsline {subsubsection}{\numberline {4.7.1.6}I\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}G\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.6}
+\contentsline {subsubsection}{\numberline {4.7.1.7}M\discretionary {-}{}{}O\discretionary {-}{}{}V\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}O\discretionary {-}{}{}W\discretionary {-}{}{}N\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.7}
+\contentsline {subsubsection}{\numberline {4.7.1.8}M\discretionary {-}{}{}O\discretionary {-}{}{}V\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.8}
+\contentsline {subsubsection}{\numberline {4.7.1.9}M\discretionary {-}{}{}O\discretionary {-}{}{}V\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}G\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.9}
+\contentsline {subsubsection}{\numberline {4.7.1.10}M\discretionary {-}{}{}O\discretionary {-}{}{}V\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}P\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.10}
+\contentsline {subsubsection}{\numberline {4.7.1.11}N\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}L\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}O\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{15}{subsubsection.4.7.1.11}
+\contentsline {subsection}{\numberline {4.7.2}Typedef Documentation}{15}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.1}Point}{15}{subsubsection.4.7.2.1}
+\contentsline {subsection}{\numberline {4.7.3}Function Documentation}{15}{subsection.4.7.3}
+\contentsline {subsubsection}{\numberline {4.7.3.1}C\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}S\discretionary {-}{}{}E}{15}{subsubsection.4.7.3.1}
+\contentsline {section}{\numberline {4.8}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/table.h File Reference}{15}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{17}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Typedef Documentation}{18}{subsection.4.8.2}
+\contentsline {subsubsection}{\numberline {4.8.2.1}color}{18}{subsubsection.4.8.2.1}
+\contentsline {subsubsection}{\numberline {4.8.2.2}color\discretionary {-}{}{}\_\discretionary {-}{}{}table}{18}{subsubsection.4.8.2.2}
+\contentsline {subsection}{\numberline {4.8.3}Enumeration Type Documentation}{18}{subsection.4.8.3}
+\contentsline {subsubsection}{\numberline {4.8.3.1}axis}{18}{subsubsection.4.8.3.1}
+\contentsline {subsubsection}{\numberline {4.8.3.2}boolean}{18}{subsubsection.4.8.3.2}
+\contentsline {subsection}{\numberline {4.8.4}Function Documentation}{18}{subsection.4.8.4}
+\contentsline {subsubsection}{\numberline {4.8.4.1}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}duplicate}{18}{subsubsection.4.8.4.1}
+\contentsline {subsubsection}{\numberline {4.8.4.2}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}color}{18}{subsubsection.4.8.4.2}
+\contentsline {subsubsection}{\numberline {4.8.4.3}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}max}{18}{subsubsection.4.8.4.3}
+\contentsline {subsubsection}{\numberline {4.8.4.4}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}min}{18}{subsubsection.4.8.4.4}
+\contentsline {subsubsection}{\numberline {4.8.4.5}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}\_\discretionary {-}{}{}color}{18}{subsubsection.4.8.4.5}
+\contentsline {subsubsection}{\numberline {4.8.4.6}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}sort}{18}{subsubsection.4.8.4.6}
+\contentsline {subsubsection}{\numberline {4.8.4.7}create\discretionary {-}{}{}\_\discretionary {-}{}{}color\discretionary {-}{}{}\_\discretionary {-}{}{}table}{18}{subsubsection.4.8.4.7}
+\contentsline {subsubsection}{\numberline {4.8.4.8}destroy\discretionary {-}{}{}\_\discretionary {-}{}{}color\discretionary {-}{}{}\_\discretionary {-}{}{}table}{18}{subsubsection.4.8.4.8}
+\contentsline {section}{\numberline {4.9}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/include/type\discretionary {-}{}{}\_\discretionary {-}{}{}obj.h File Reference}{18}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Macro Definition Documentation}{19}{subsection.4.9.1}
+\contentsline {subsubsection}{\numberline {4.9.1.1}D\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X}{19}{subsubsection.4.9.1.1}
+\contentsline {subsection}{\numberline {4.9.2}Typedef Documentation}{19}{subsection.4.9.2}
+\contentsline {subsubsection}{\numberline {4.9.2.1}angle}{19}{subsubsection.4.9.2.1}
+\contentsline {subsection}{\numberline {4.9.3}Enumeration Type Documentation}{19}{subsection.4.9.3}
+\contentsline {subsubsection}{\numberline {4.9.3.1}booleen}{19}{subsubsection.4.9.3.1}
+\contentsline {section}{\numberline {4.10}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/arbre.c File Reference}{19}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{21}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Function Documentation}{22}{subsection.4.10.2}
+\contentsline {subsubsection}{\numberline {4.10.2.1}choose\discretionary {-}{}{}\_\discretionary {-}{}{}axis\discretionary {-}{}{}\_\discretionary {-}{}{}position}{22}{subsubsection.4.10.2.1}
+\contentsline {subsubsection}{\numberline {4.10.2.2}choose\discretionary {-}{}{}\_\discretionary {-}{}{}sorting\discretionary {-}{}{}\_\discretionary {-}{}{}axis\discretionary {-}{}{}\_\discretionary {-}{}{}by\discretionary {-}{}{}\_\discretionary {-}{}{}max}{22}{subsubsection.4.10.2.2}
+\contentsline {subsubsection}{\numberline {4.10.2.3}choose\discretionary {-}{}{}\_\discretionary {-}{}{}sorting\discretionary {-}{}{}\_\discretionary {-}{}{}axis\discretionary {-}{}{}\_\discretionary {-}{}{}by\discretionary {-}{}{}\_\discretionary {-}{}{}var}{22}{subsubsection.4.10.2.3}
+\contentsline {subsubsection}{\numberline {4.10.2.4}create\discretionary {-}{}{}\_\discretionary {-}{}{}kdtree}{22}{subsubsection.4.10.2.4}
+\contentsline {subsubsection}{\numberline {4.10.2.5}destroy\discretionary {-}{}{}\_\discretionary {-}{}{}kdtree}{22}{subsubsection.4.10.2.5}
+\contentsline {subsubsection}{\numberline {4.10.2.6}get\discretionary {-}{}{}\_\discretionary {-}{}{}distance\discretionary {-}{}{}\_\discretionary {-}{}{}between\discretionary {-}{}{}\_\discretionary {-}{}{}colors}{22}{subsubsection.4.10.2.6}
+\contentsline {subsubsection}{\numberline {4.10.2.7}kdtree\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}nearest\discretionary {-}{}{}\_\discretionary {-}{}{}color}{22}{subsubsection.4.10.2.7}
+\contentsline {subsubsection}{\numberline {4.10.2.8}search\discretionary {-}{}{}\_\discretionary {-}{}{}nearest\discretionary {-}{}{}\_\discretionary {-}{}{}color\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}node}{22}{subsubsection.4.10.2.8}
+\contentsline {section}{\numberline {4.11}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/graphdata.c File Reference}{22}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{22}{subsection.4.11.1}
+\contentsline {subsection}{\numberline {4.11.2}Function Documentation}{22}{subsection.4.11.2}
+\contentsline {subsubsection}{\numberline {4.11.2.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}exec\discretionary {-}{}{}\_\discretionary {-}{}{}time\discretionary {-}{}{}\_\discretionary {-}{}{}tree}{22}{subsubsection.4.11.2.1}
+\contentsline {subsubsection}{\numberline {4.11.2.2}get\discretionary {-}{}{}\_\discretionary {-}{}{}exec\discretionary {-}{}{}\_\discretionary {-}{}{}time\discretionary {-}{}{}\_\discretionary {-}{}{}trivial}{22}{subsubsection.4.11.2.2}
+\contentsline {subsubsection}{\numberline {4.11.2.3}main}{23}{subsubsection.4.11.2.3}
+\contentsline {section}{\numberline {4.12}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/image.c File Reference}{23}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Macro Definition Documentation}{24}{subsection.4.12.1}
+\contentsline {subsubsection}{\numberline {4.12.1.1}Courant}{24}{subsubsection.4.12.1.1}
+\contentsline {subsubsection}{\numberline {4.12.1.2}Debut}{24}{subsubsection.4.12.1.2}
+\contentsline {subsubsection}{\numberline {4.12.1.3}D\discretionary {-}{}{}E\discretionary {-}{}{}P\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}C\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}N\discretionary {-}{}{}T}{24}{subsubsection.4.12.1.3}
+\contentsline {subsubsection}{\numberline {4.12.1.4}Dim}{24}{subsubsection.4.12.1.4}
+\contentsline {subsubsection}{\numberline {4.12.1.5}Distance}{24}{subsubsection.4.12.1.5}
+\contentsline {subsubsection}{\numberline {4.12.1.6}Hauteur}{24}{subsubsection.4.12.1.6}
+\contentsline {subsubsection}{\numberline {4.12.1.7}Largeur}{24}{subsubsection.4.12.1.7}
+\contentsline {subsubsection}{\numberline {4.12.1.8}Longueur}{24}{subsubsection.4.12.1.8}
+\contentsline {subsubsection}{\numberline {4.12.1.9}M\discretionary {-}{}{}O\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}E\discretionary {-}{}{}C\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}U\discretionary {-}{}{}R\discretionary {-}{}{}E}{24}{subsubsection.4.12.1.9}
+\contentsline {subsubsection}{\numberline {4.12.1.10}M\discretionary {-}{}{}O\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}C\discretionary {-}{}{}T\discretionary {-}{}{}U\discretionary {-}{}{}R\discretionary {-}{}{}E}{24}{subsubsection.4.12.1.10}
+\contentsline {subsubsection}{\numberline {4.12.1.11}Taille}{24}{subsubsection.4.12.1.11}
+\contentsline {subsection}{\numberline {4.12.2}Typedef Documentation}{24}{subsection.4.12.2}
+\contentsline {subsubsection}{\numberline {4.12.2.1}Comp\discretionary {-}{}{}\_\discretionary {-}{}{}rgb}{24}{subsubsection.4.12.2.1}
+\contentsline {subsubsection}{\numberline {4.12.2.2}P\discretionary {-}{}{}Fsauvegarde}{24}{subsubsection.4.12.2.2}
+\contentsline {subsection}{\numberline {4.12.3}Function Documentation}{24}{subsection.4.12.3}
+\contentsline {subsubsection}{\numberline {4.12.3.1}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}image}{24}{subsubsection.4.12.3.1}
+\contentsline {subsubsection}{\numberline {4.12.3.2}F\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}image}{24}{subsubsection.4.12.3.2}
+\contentsline {subsubsection}{\numberline {4.12.3.3}image\discretionary {-}{}{}\_\discretionary {-}{}{}charger}{24}{subsubsection.4.12.3.3}
+\contentsline {subsubsection}{\numberline {4.12.3.4}image\discretionary {-}{}{}\_\discretionary {-}{}{}debut}{24}{subsubsection.4.12.3.4}
+\contentsline {subsubsection}{\numberline {4.12.3.5}image\discretionary {-}{}{}\_\discretionary {-}{}{}distance}{24}{subsubsection.4.12.3.5}
+\contentsline {subsubsection}{\numberline {4.12.3.6}image\discretionary {-}{}{}\_\discretionary {-}{}{}ecrire\discretionary {-}{}{}\_\discretionary {-}{}{}pixel}{24}{subsubsection.4.12.3.6}
+\contentsline {subsubsection}{\numberline {4.12.3.7}image\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}comp}{24}{subsubsection.4.12.3.7}
+\contentsline {subsubsection}{\numberline {4.12.3.8}image\discretionary {-}{}{}\_\discretionary {-}{}{}give\discretionary {-}{}{}\_\discretionary {-}{}{}dim}{24}{subsubsection.4.12.3.8}
+\contentsline {subsubsection}{\numberline {4.12.3.9}image\discretionary {-}{}{}\_\discretionary {-}{}{}give\discretionary {-}{}{}\_\discretionary {-}{}{}hauteur}{24}{subsubsection.4.12.3.9}
+\contentsline {subsubsection}{\numberline {4.12.3.10}image\discretionary {-}{}{}\_\discretionary {-}{}{}give\discretionary {-}{}{}\_\discretionary {-}{}{}largeur}{25}{subsubsection.4.12.3.10}
+\contentsline {subsubsection}{\numberline {4.12.3.11}image\discretionary {-}{}{}\_\discretionary {-}{}{}initialize}{25}{subsubsection.4.12.3.11}
+\contentsline {subsubsection}{\numberline {4.12.3.12}image\discretionary {-}{}{}\_\discretionary {-}{}{}lire\discretionary {-}{}{}\_\discretionary {-}{}{}pixel}{25}{subsubsection.4.12.3.12}
+\contentsline {subsubsection}{\numberline {4.12.3.13}image\discretionary {-}{}{}\_\discretionary {-}{}{}move\discretionary {-}{}{}\_\discretionary {-}{}{}to}{25}{subsubsection.4.12.3.13}
+\contentsline {subsubsection}{\numberline {4.12.3.14}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}dessous}{25}{subsubsection.4.12.3.14}
+\contentsline {subsubsection}{\numberline {4.12.3.15}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}dessus}{25}{subsubsection.4.12.3.15}
+\contentsline {subsubsection}{\numberline {4.12.3.16}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}droite}{25}{subsubsection.4.12.3.16}
+\contentsline {subsubsection}{\numberline {4.12.3.17}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}gauche}{25}{subsubsection.4.12.3.17}
+\contentsline {subsubsection}{\numberline {4.12.3.18}image\discretionary {-}{}{}\_\discretionary {-}{}{}pixel\discretionary {-}{}{}\_\discretionary {-}{}{}suivant}{25}{subsubsection.4.12.3.18}
+\contentsline {subsubsection}{\numberline {4.12.3.19}image\discretionary {-}{}{}\_\discretionary {-}{}{}sauvegarder}{25}{subsubsection.4.12.3.19}
+\contentsline {subsubsection}{\numberline {4.12.3.20}image\discretionary {-}{}{}\_\discretionary {-}{}{}set\discretionary {-}{}{}\_\discretionary {-}{}{}distance}{25}{subsubsection.4.12.3.20}
+\contentsline {subsubsection}{\numberline {4.12.3.21}image\discretionary {-}{}{}\_\discretionary {-}{}{}to\discretionary {-}{}{}\_\discretionary {-}{}{}stream}{25}{subsubsection.4.12.3.21}
+\contentsline {section}{\numberline {4.13}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/inversion.c File Reference}{25}{section.4.13}
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{25}{subsection.4.13.1}
+\contentsline {subsection}{\numberline {4.13.2}Function Documentation}{25}{subsection.4.13.2}
+\contentsline {subsubsection}{\numberline {4.13.2.1}main}{26}{subsubsection.4.13.2.1}
+\contentsline {section}{\numberline {4.14}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/table.c File Reference}{26}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{28}{subsection.4.14.1}
+\contentsline {subsection}{\numberline {4.14.2}Function Documentation}{28}{subsection.4.14.2}
+\contentsline {subsubsection}{\numberline {4.14.2.1}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}duplicate}{28}{subsubsection.4.14.2.1}
+\contentsline {subsubsection}{\numberline {4.14.2.2}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}color}{28}{subsubsection.4.14.2.2}
+\contentsline {subsubsection}{\numberline {4.14.2.3}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}max}{28}{subsubsection.4.14.2.3}
+\contentsline {subsubsection}{\numberline {4.14.2.4}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}min}{28}{subsubsection.4.14.2.4}
+\contentsline {subsubsection}{\numberline {4.14.2.5}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}\_\discretionary {-}{}{}color}{28}{subsubsection.4.14.2.5}
+\contentsline {subsubsection}{\numberline {4.14.2.6}color\discretionary {-}{}{}\_\discretionary {-}{}{}table\discretionary {-}{}{}\_\discretionary {-}{}{}sort}{28}{subsubsection.4.14.2.6}
+\contentsline {subsubsection}{\numberline {4.14.2.7}create\discretionary {-}{}{}\_\discretionary {-}{}{}color\discretionary {-}{}{}\_\discretionary {-}{}{}table}{28}{subsubsection.4.14.2.7}
+\contentsline {subsubsection}{\numberline {4.14.2.8}destroy\discretionary {-}{}{}\_\discretionary {-}{}{}color\discretionary {-}{}{}\_\discretionary {-}{}{}table}{28}{subsubsection.4.14.2.8}
+\contentsline {section}{\numberline {4.15}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/test\discretionary {-}{}{}\_\discretionary {-}{}{}arbre.c File Reference}{29}{section.4.15}
+\contentsline {subsection}{\numberline {4.15.1}Function Documentation}{29}{subsection.4.15.1}
+\contentsline {subsubsection}{\numberline {4.15.1.1}main}{29}{subsubsection.4.15.1.1}
+\contentsline {subsubsection}{\numberline {4.15.1.2}print\discretionary {-}{}{}Tree}{29}{subsubsection.4.15.1.2}
+\contentsline {section}{\numberline {4.16}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/test\discretionary {-}{}{}\_\discretionary {-}{}{}table.c File Reference}{29}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{29}{subsection.4.16.1}
+\contentsline {subsection}{\numberline {4.16.2}Function Documentation}{29}{subsection.4.16.2}
+\contentsline {subsubsection}{\numberline {4.16.2.1}main}{29}{subsubsection.4.16.2.1}
+\contentsline {section}{\numberline {4.17}/media/psf/\discretionary {-}{}{}Home/\discretionary {-}{}{}Desktop/\discretionary {-}{}{}Prog C/\discretionary {-}{}{}Projet\discretionary {-}{}{}C-\/\discretionary {-}{}{}Inversion/src/trivial.c File Reference}{29}{section.4.17}
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{30}{subsection.4.17.1}
+\contentsline {subsection}{\numberline {4.17.2}Function Documentation}{30}{subsection.4.17.2}
+\contentsline {subsubsection}{\numberline {4.17.2.1}main}{30}{subsubsection.4.17.2.1}

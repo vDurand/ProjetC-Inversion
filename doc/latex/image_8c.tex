@@ -1,0 +1,303 @@
+\hypertarget{image_8c}{\section{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/image.c File Reference}
+\label{image_8c}\index{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/image.\-c@{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/image.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}image.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}point.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}type\-\_\-obj.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structimage}{image}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{image_8c_a6c22c12ac7a58b494ea80566ba5bcc6f}{Debut}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(debut)
+\item 
+\#define \hyperlink{image_8c_a45613fe4ac7c8c651a42849f33412e0e}{Courant}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(courant)
+\item 
+\#define \hyperlink{image_8c_ada0cf9e300bc285b3f2fa145202ff8d0}{Largeur}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(largeur)
+\item 
+\#define \hyperlink{image_8c_aa99bd3b905142d61c663de678ac6ab4c}{Hauteur}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(hauteur)
+\item 
+\#define \hyperlink{image_8c_a4ffcba8924a1dde0ff9a4440b818871c}{Longueur}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(longueur)
+\item 
+\#define \hyperlink{image_8c_a79a56eb8cfa806c36361303aba2095be}{Taille}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(taille)
+\item 
+\#define \hyperlink{image_8c_a29fbe3dd3ce308a36d5b29488daddcaa}{Distance}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(distance)
+\item 
+\#define \hyperlink{image_8c_aa1dbc44d419ee01807fb4b842d361373}{Dim}~\hyperlink{objet_8h_a1a728fc353f9ec9f1c2fcfc05294839a}{S\-E\-L\-F}(dim)
+\item 
+\#define \hyperlink{image_8c_ac10e27f5be426181416b03a7f213e2f1}{D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T}(i, j)~( \hyperlink{image_8c_aa1dbc44d419ee01807fb4b842d361373}{Dim}$\ast$( (i)$\ast$\hyperlink{image_8c_ada0cf9e300bc285b3f2fa145202ff8d0}{Largeur}+(j) ) )
+\item 
+\#define \hyperlink{image_8c_a34e33b07d4072cafb888fe6f202e60c1}{M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E}~\char`\"{}r\char`\"{}
+\item 
+\#define \hyperlink{image_8c_a4a5e0cc948361c4d70ada81c2687be15}{M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E}~\char`\"{}w\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{image_8c_a55daf8e5c5064d89aecb30ff9550cdae}{Comp\-\_\-rgb}
+\item 
+typedef int($\ast$ \hyperlink{image_8c_af3b816b2a9a687324f6563875441c58e}{P\-Fsauvegarde} )(\hyperlink{structimage}{image}, F\-I\-L\-E $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structimage}{image} \hyperlink{image_8c_a139e26a18b251056e0083bba619ac71a}{F\-A\-I\-R\-E\-\_\-image} ()
+\item 
+void \hyperlink{image_8c_ab74076e2eee53960440dac8109a2c5f1}{D\-E\-F\-A\-I\-R\-E\-\_\-image} (\hyperlink{structimage}{image} self)
+\item 
+void \hyperlink{image_8c_a1453a57bb9b47903317c5abeedbf2146}{image\-\_\-initialize} (\hyperlink{structimage}{image} self, int dim, int largeur, int hauteur)
+\item 
+int \hyperlink{image_8c_a9efb691227755fa34456fb32af760812}{image\-\_\-charger} (\hyperlink{structimage}{image} self, char $\ast$nom)
+\item 
+int \hyperlink{image_8c_a8e4820ee6ee70953a6a7c48efd28dbe7}{image\-\_\-sauvegarder} (\hyperlink{structimage}{image} self, char $\ast$nom)
+\item 
+int \hyperlink{image_8c_adfcde016a864c0b1d5292f8317f370dc}{image\-\_\-to\-\_\-stream} (\hyperlink{structimage}{image} self, F\-I\-L\-E $\ast$id)
+\item 
+int $\ast$ \hyperlink{image_8c_a1172f60bd49df89f1f377b02d56e6d01}{image\-\_\-lire\-\_\-pixel} (\hyperlink{structimage}{image} self)
+\item 
+int \hyperlink{image_8c_aebc375e085c7d6a39ae00c8749d77dcf}{image\-\_\-get\-\_\-comp} (\hyperlink{structimage}{image} self, \hyperlink{structpoint}{point} p, int comp)
+\item 
+void \hyperlink{image_8c_a0dd01111fe7ab87354682caebf21af87}{image\-\_\-ecrire\-\_\-pixel} (\hyperlink{structimage}{image} self, int $\ast$tab)
+\item 
+\hyperlink{type__obj_8h_a741a7664ae46ffb773db384a85a497e7}{booleen} \hyperlink{image_8c_af5dabf38e994cfff727f8c43435ed4b6}{image\-\_\-pixel\-\_\-suivant} (\hyperlink{structimage}{image} self)
+\item 
+void \hyperlink{image_8c_a259b59b29505e47992e4614b762b3448}{image\-\_\-debut} (\hyperlink{structimage}{image} self)
+\item 
+\hyperlink{type__obj_8h_a741a7664ae46ffb773db384a85a497e7}{booleen} \hyperlink{image_8c_af61f4fb6dd2512a7c7b15e59800c2daf}{image\-\_\-move\-\_\-to} (\hyperlink{structimage}{image} self, \hyperlink{structpoint}{point} p)
+\item 
+\hyperlink{type__obj_8h_a741a7664ae46ffb773db384a85a497e7}{booleen} \hyperlink{image_8c_ab668845b390586d448e78b7bc0c2d011}{image\-\_\-pixel\-\_\-dessus} (\hyperlink{structimage}{image} self)
+\item 
+\hyperlink{type__obj_8h_a741a7664ae46ffb773db384a85a497e7}{booleen} \hyperlink{image_8c_a707db81a30e07f313c6a243797f85a42}{image\-\_\-pixel\-\_\-dessous} (\hyperlink{structimage}{image} self)
+\item 
+\hyperlink{type__obj_8h_a741a7664ae46ffb773db384a85a497e7}{booleen} \hyperlink{image_8c_a641dee1d0a22fabb43b0f2bde5dbe45c}{image\-\_\-pixel\-\_\-gauche} (\hyperlink{structimage}{image} self)
+\item 
+\hyperlink{type__obj_8h_a741a7664ae46ffb773db384a85a497e7}{booleen} \hyperlink{image_8c_a4b1aa931486b64ebeae750341683e467}{image\-\_\-pixel\-\_\-droite} (\hyperlink{structimage}{image} self)
+\item 
+double \hyperlink{image_8c_ab0386e72e44438a223790fd48b5965a4}{image\-\_\-distance} (\hyperlink{structimage}{image} self, \hyperlink{structpoint}{point} p, \hyperlink{move__type_8h_a84e320539584563e635b1513c1320eda}{move\-\_\-type} move)
+\item 
+void \hyperlink{image_8c_a01f52328d82dcd0a5d046a84262e9134}{image\-\_\-set\-\_\-distance} (\hyperlink{structimage}{image} self, \hyperlink{image_8h_a7064539af2f359fdf499f2f7c06aefb2}{P\-Fdist} fct\-\_\-dist)
+\item 
+int \hyperlink{image_8c_a6b12f64635b6d42600e6a357011cf0cf}{image\-\_\-give\-\_\-dim} (\hyperlink{structimage}{image} self)
+\item 
+int \hyperlink{image_8c_a26840609e1a4b1a47850c6bce3f153a0}{image\-\_\-give\-\_\-largeur} (\hyperlink{structimage}{image} self)
+\item 
+int \hyperlink{image_8c_a760aee495db5c831ce0796a89f0011e2}{image\-\_\-give\-\_\-hauteur} (\hyperlink{structimage}{image} self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{image_8c_a45613fe4ac7c8c651a42849f33412e0e}{\index{image.\-c@{image.\-c}!Courant@{Courant}}
+\index{Courant@{Courant}!image.c@{image.\-c}}
+\subsubsection[{Courant}]{\setlength{\rightskip}{0pt plus 5cm}\#define Courant~{\bf S\-E\-L\-F}(courant)}}\label{image_8c_a45613fe4ac7c8c651a42849f33412e0e}
+\hypertarget{image_8c_a6c22c12ac7a58b494ea80566ba5bcc6f}{\index{image.\-c@{image.\-c}!Debut@{Debut}}
+\index{Debut@{Debut}!image.c@{image.\-c}}
+\subsubsection[{Debut}]{\setlength{\rightskip}{0pt plus 5cm}\#define Debut~{\bf S\-E\-L\-F}(debut)}}\label{image_8c_a6c22c12ac7a58b494ea80566ba5bcc6f}
+\hypertarget{image_8c_ac10e27f5be426181416b03a7f213e2f1}{\index{image.\-c@{image.\-c}!D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T@{D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T}}
+\index{D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T@{D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T}!image.c@{image.\-c}}
+\subsubsection[{D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T(
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)~( {\bf Dim}$\ast$( (i)$\ast${\bf Largeur}+(j) ) )}}\label{image_8c_ac10e27f5be426181416b03a7f213e2f1}
+\hypertarget{image_8c_aa1dbc44d419ee01807fb4b842d361373}{\index{image.\-c@{image.\-c}!Dim@{Dim}}
+\index{Dim@{Dim}!image.c@{image.\-c}}
+\subsubsection[{Dim}]{\setlength{\rightskip}{0pt plus 5cm}\#define Dim~{\bf S\-E\-L\-F}(dim)}}\label{image_8c_aa1dbc44d419ee01807fb4b842d361373}
+\hypertarget{image_8c_a29fbe3dd3ce308a36d5b29488daddcaa}{\index{image.\-c@{image.\-c}!Distance@{Distance}}
+\index{Distance@{Distance}!image.c@{image.\-c}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}\#define Distance~{\bf S\-E\-L\-F}(distance)}}\label{image_8c_a29fbe3dd3ce308a36d5b29488daddcaa}
+\hypertarget{image_8c_aa99bd3b905142d61c663de678ac6ab4c}{\index{image.\-c@{image.\-c}!Hauteur@{Hauteur}}
+\index{Hauteur@{Hauteur}!image.c@{image.\-c}}
+\subsubsection[{Hauteur}]{\setlength{\rightskip}{0pt plus 5cm}\#define Hauteur~{\bf S\-E\-L\-F}(hauteur)}}\label{image_8c_aa99bd3b905142d61c663de678ac6ab4c}
+\hypertarget{image_8c_ada0cf9e300bc285b3f2fa145202ff8d0}{\index{image.\-c@{image.\-c}!Largeur@{Largeur}}
+\index{Largeur@{Largeur}!image.c@{image.\-c}}
+\subsubsection[{Largeur}]{\setlength{\rightskip}{0pt plus 5cm}\#define Largeur~{\bf S\-E\-L\-F}(largeur)}}\label{image_8c_ada0cf9e300bc285b3f2fa145202ff8d0}
+\hypertarget{image_8c_a4ffcba8924a1dde0ff9a4440b818871c}{\index{image.\-c@{image.\-c}!Longueur@{Longueur}}
+\index{Longueur@{Longueur}!image.c@{image.\-c}}
+\subsubsection[{Longueur}]{\setlength{\rightskip}{0pt plus 5cm}\#define Longueur~{\bf S\-E\-L\-F}(longueur)}}\label{image_8c_a4ffcba8924a1dde0ff9a4440b818871c}
+\hypertarget{image_8c_a4a5e0cc948361c4d70ada81c2687be15}{\index{image.\-c@{image.\-c}!M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E@{M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E}}
+\index{M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E@{M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E}!image.c@{image.\-c}}
+\subsubsection[{M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-E\-\_\-\-E\-C\-R\-I\-T\-U\-R\-E~\char`\"{}w\char`\"{}}}\label{image_8c_a4a5e0cc948361c4d70ada81c2687be15}
+\hypertarget{image_8c_a34e33b07d4072cafb888fe6f202e60c1}{\index{image.\-c@{image.\-c}!M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E@{M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E}}
+\index{M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E@{M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E}!image.c@{image.\-c}}
+\subsubsection[{M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-E\-\_\-\-L\-E\-C\-T\-U\-R\-E~\char`\"{}r\char`\"{}}}\label{image_8c_a34e33b07d4072cafb888fe6f202e60c1}
+\hypertarget{image_8c_a79a56eb8cfa806c36361303aba2095be}{\index{image.\-c@{image.\-c}!Taille@{Taille}}
+\index{Taille@{Taille}!image.c@{image.\-c}}
+\subsubsection[{Taille}]{\setlength{\rightskip}{0pt plus 5cm}\#define Taille~{\bf S\-E\-L\-F}(taille)}}\label{image_8c_a79a56eb8cfa806c36361303aba2095be}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{image_8c_a55daf8e5c5064d89aecb30ff9550cdae}{\index{image.\-c@{image.\-c}!Comp\-\_\-rgb@{Comp\-\_\-rgb}}
+\index{Comp\-\_\-rgb@{Comp\-\_\-rgb}!image.c@{image.\-c}}
+\subsubsection[{Comp\-\_\-rgb}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Comp\-\_\-rgb}}}\label{image_8c_a55daf8e5c5064d89aecb30ff9550cdae}
+\hypertarget{image_8c_af3b816b2a9a687324f6563875441c58e}{\index{image.\-c@{image.\-c}!P\-Fsauvegarde@{P\-Fsauvegarde}}
+\index{P\-Fsauvegarde@{P\-Fsauvegarde}!image.c@{image.\-c}}
+\subsubsection[{P\-Fsauvegarde}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ P\-Fsauvegarde)({\bf image}, F\-I\-L\-E $\ast$)}}\label{image_8c_af3b816b2a9a687324f6563875441c58e}
+
+
+\subsection{Function Documentation}
+\hypertarget{image_8c_ab74076e2eee53960440dac8109a2c5f1}{\index{image.\-c@{image.\-c}!D\-E\-F\-A\-I\-R\-E\-\_\-image@{D\-E\-F\-A\-I\-R\-E\-\_\-image}}
+\index{D\-E\-F\-A\-I\-R\-E\-\_\-image@{D\-E\-F\-A\-I\-R\-E\-\_\-image}!image.c@{image.\-c}}
+\subsubsection[{D\-E\-F\-A\-I\-R\-E\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}void D\-E\-F\-A\-I\-R\-E\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_ab74076e2eee53960440dac8109a2c5f1}
+\hypertarget{image_8c_a139e26a18b251056e0083bba619ac71a}{\index{image.\-c@{image.\-c}!F\-A\-I\-R\-E\-\_\-image@{F\-A\-I\-R\-E\-\_\-image}}
+\index{F\-A\-I\-R\-E\-\_\-image@{F\-A\-I\-R\-E\-\_\-image}!image.c@{image.\-c}}
+\subsubsection[{F\-A\-I\-R\-E\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image} F\-A\-I\-R\-E\-\_\-image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a139e26a18b251056e0083bba619ac71a}
+\hypertarget{image_8c_a9efb691227755fa34456fb32af760812}{\index{image.\-c@{image.\-c}!image\-\_\-charger@{image\-\_\-charger}}
+\index{image\-\_\-charger@{image\-\_\-charger}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-charger}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-charger (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{char $\ast$}]{nom}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a9efb691227755fa34456fb32af760812}
+\hypertarget{image_8c_a259b59b29505e47992e4614b762b3448}{\index{image.\-c@{image.\-c}!image\-\_\-debut@{image\-\_\-debut}}
+\index{image\-\_\-debut@{image\-\_\-debut}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-debut}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-debut (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a259b59b29505e47992e4614b762b3448}
+\hypertarget{image_8c_ab0386e72e44438a223790fd48b5965a4}{\index{image.\-c@{image.\-c}!image\-\_\-distance@{image\-\_\-distance}}
+\index{image\-\_\-distance@{image\-\_\-distance}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-distance}]{\setlength{\rightskip}{0pt plus 5cm}double image\-\_\-distance (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{{\bf point}}]{p, }
+\item[{{\bf move\-\_\-type}}]{move}
+\end{DoxyParamCaption}
+)}}\label{image_8c_ab0386e72e44438a223790fd48b5965a4}
+\hypertarget{image_8c_a0dd01111fe7ab87354682caebf21af87}{\index{image.\-c@{image.\-c}!image\-\_\-ecrire\-\_\-pixel@{image\-\_\-ecrire\-\_\-pixel}}
+\index{image\-\_\-ecrire\-\_\-pixel@{image\-\_\-ecrire\-\_\-pixel}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-ecrire\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-ecrire\-\_\-pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{int $\ast$}]{tab}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a0dd01111fe7ab87354682caebf21af87}
+\hypertarget{image_8c_aebc375e085c7d6a39ae00c8749d77dcf}{\index{image.\-c@{image.\-c}!image\-\_\-get\-\_\-comp@{image\-\_\-get\-\_\-comp}}
+\index{image\-\_\-get\-\_\-comp@{image\-\_\-get\-\_\-comp}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-get\-\_\-comp}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-get\-\_\-comp (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{{\bf point}}]{p, }
+\item[{int}]{comp}
+\end{DoxyParamCaption}
+)}}\label{image_8c_aebc375e085c7d6a39ae00c8749d77dcf}
+\hypertarget{image_8c_a6b12f64635b6d42600e6a357011cf0cf}{\index{image.\-c@{image.\-c}!image\-\_\-give\-\_\-dim@{image\-\_\-give\-\_\-dim}}
+\index{image\-\_\-give\-\_\-dim@{image\-\_\-give\-\_\-dim}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-give\-\_\-dim}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-give\-\_\-dim (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a6b12f64635b6d42600e6a357011cf0cf}
+\hypertarget{image_8c_a760aee495db5c831ce0796a89f0011e2}{\index{image.\-c@{image.\-c}!image\-\_\-give\-\_\-hauteur@{image\-\_\-give\-\_\-hauteur}}
+\index{image\-\_\-give\-\_\-hauteur@{image\-\_\-give\-\_\-hauteur}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-give\-\_\-hauteur}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-give\-\_\-hauteur (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a760aee495db5c831ce0796a89f0011e2}
+\hypertarget{image_8c_a26840609e1a4b1a47850c6bce3f153a0}{\index{image.\-c@{image.\-c}!image\-\_\-give\-\_\-largeur@{image\-\_\-give\-\_\-largeur}}
+\index{image\-\_\-give\-\_\-largeur@{image\-\_\-give\-\_\-largeur}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-give\-\_\-largeur}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-give\-\_\-largeur (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a26840609e1a4b1a47850c6bce3f153a0}
+\hypertarget{image_8c_a1453a57bb9b47903317c5abeedbf2146}{\index{image.\-c@{image.\-c}!image\-\_\-initialize@{image\-\_\-initialize}}
+\index{image\-\_\-initialize@{image\-\_\-initialize}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{int}]{dim, }
+\item[{int}]{largeur, }
+\item[{int}]{hauteur}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a1453a57bb9b47903317c5abeedbf2146}
+\hypertarget{image_8c_a1172f60bd49df89f1f377b02d56e6d01}{\index{image.\-c@{image.\-c}!image\-\_\-lire\-\_\-pixel@{image\-\_\-lire\-\_\-pixel}}
+\index{image\-\_\-lire\-\_\-pixel@{image\-\_\-lire\-\_\-pixel}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-lire\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ image\-\_\-lire\-\_\-pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a1172f60bd49df89f1f377b02d56e6d01}
+\hypertarget{image_8c_af61f4fb6dd2512a7c7b15e59800c2daf}{\index{image.\-c@{image.\-c}!image\-\_\-move\-\_\-to@{image\-\_\-move\-\_\-to}}
+\index{image\-\_\-move\-\_\-to@{image\-\_\-move\-\_\-to}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-move\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleen} image\-\_\-move\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{{\bf point}}]{p}
+\end{DoxyParamCaption}
+)}}\label{image_8c_af61f4fb6dd2512a7c7b15e59800c2daf}
+\hypertarget{image_8c_a707db81a30e07f313c6a243797f85a42}{\index{image.\-c@{image.\-c}!image\-\_\-pixel\-\_\-dessous@{image\-\_\-pixel\-\_\-dessous}}
+\index{image\-\_\-pixel\-\_\-dessous@{image\-\_\-pixel\-\_\-dessous}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-pixel\-\_\-dessous}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleen} image\-\_\-pixel\-\_\-dessous (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a707db81a30e07f313c6a243797f85a42}
+\hypertarget{image_8c_ab668845b390586d448e78b7bc0c2d011}{\index{image.\-c@{image.\-c}!image\-\_\-pixel\-\_\-dessus@{image\-\_\-pixel\-\_\-dessus}}
+\index{image\-\_\-pixel\-\_\-dessus@{image\-\_\-pixel\-\_\-dessus}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-pixel\-\_\-dessus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleen} image\-\_\-pixel\-\_\-dessus (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_ab668845b390586d448e78b7bc0c2d011}
+\hypertarget{image_8c_a4b1aa931486b64ebeae750341683e467}{\index{image.\-c@{image.\-c}!image\-\_\-pixel\-\_\-droite@{image\-\_\-pixel\-\_\-droite}}
+\index{image\-\_\-pixel\-\_\-droite@{image\-\_\-pixel\-\_\-droite}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-pixel\-\_\-droite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleen} image\-\_\-pixel\-\_\-droite (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a4b1aa931486b64ebeae750341683e467}
+\hypertarget{image_8c_a641dee1d0a22fabb43b0f2bde5dbe45c}{\index{image.\-c@{image.\-c}!image\-\_\-pixel\-\_\-gauche@{image\-\_\-pixel\-\_\-gauche}}
+\index{image\-\_\-pixel\-\_\-gauche@{image\-\_\-pixel\-\_\-gauche}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-pixel\-\_\-gauche}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleen} image\-\_\-pixel\-\_\-gauche (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a641dee1d0a22fabb43b0f2bde5dbe45c}
+\hypertarget{image_8c_af5dabf38e994cfff727f8c43435ed4b6}{\index{image.\-c@{image.\-c}!image\-\_\-pixel\-\_\-suivant@{image\-\_\-pixel\-\_\-suivant}}
+\index{image\-\_\-pixel\-\_\-suivant@{image\-\_\-pixel\-\_\-suivant}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-pixel\-\_\-suivant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleen} image\-\_\-pixel\-\_\-suivant (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self}
+\end{DoxyParamCaption}
+)}}\label{image_8c_af5dabf38e994cfff727f8c43435ed4b6}
+\hypertarget{image_8c_a8e4820ee6ee70953a6a7c48efd28dbe7}{\index{image.\-c@{image.\-c}!image\-\_\-sauvegarder@{image\-\_\-sauvegarder}}
+\index{image\-\_\-sauvegarder@{image\-\_\-sauvegarder}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-sauvegarder}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-sauvegarder (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{char $\ast$}]{nom}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a8e4820ee6ee70953a6a7c48efd28dbe7}
+\hypertarget{image_8c_a01f52328d82dcd0a5d046a84262e9134}{\index{image.\-c@{image.\-c}!image\-\_\-set\-\_\-distance@{image\-\_\-set\-\_\-distance}}
+\index{image\-\_\-set\-\_\-distance@{image\-\_\-set\-\_\-distance}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-set\-\_\-distance}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-set\-\_\-distance (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{{\bf P\-Fdist}}]{fct\-\_\-dist}
+\end{DoxyParamCaption}
+)}}\label{image_8c_a01f52328d82dcd0a5d046a84262e9134}
+\hypertarget{image_8c_adfcde016a864c0b1d5292f8317f370dc}{\index{image.\-c@{image.\-c}!image\-\_\-to\-\_\-stream@{image\-\_\-to\-\_\-stream}}
+\index{image\-\_\-to\-\_\-stream@{image\-\_\-to\-\_\-stream}!image.c@{image.\-c}}
+\subsubsection[{image\-\_\-to\-\_\-stream}]{\setlength{\rightskip}{0pt plus 5cm}int image\-\_\-to\-\_\-stream (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{self, }
+\item[{F\-I\-L\-E $\ast$}]{id}
+\end{DoxyParamCaption}
+)}}\label{image_8c_adfcde016a864c0b1d5292f8317f370dc}

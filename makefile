@@ -14,7 +14,7 @@ DOC=$(REF)doc/
 
 install: all clean
 
-all: libimage inversion
+all: libimage inversion trivial graphdata
 
 # Compilation library image
 libimage: 

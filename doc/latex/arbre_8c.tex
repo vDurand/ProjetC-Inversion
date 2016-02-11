@@ -1,0 +1,238 @@
+\hypertarget{arbre_8c}{\section{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/arbre.c File Reference}
+\label{arbre_8c}\index{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/arbre.\-c@{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/arbre.\-c}}
+}
+
+
+Fonctions pour les kd arbres.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}image.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arbre.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{Indent}{\bf choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max}\par
+{\em La fonction choisi l axe de coupe avec la plus grande difference entre le min et le max
+
+private
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur dont on cherche l axe de coupe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+axis l axe de coupe choisi 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{table_8h_accc088009d44c521706aa98d6387ee21}{axis} \hyperlink{arbre_8c_a18fbbea78ff279a9e265adcc938c4b8a}{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var}\par
+{\em La fonction choisi l axe de coupe avec la plus grande variance
+
+private
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur dont on cherche l axe de coupe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+axis l axe de coupe choisi 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{table_8h_accc088009d44c521706aa98d6387ee21}{axis} \hyperlink{arbre_8c_a3d051b4d04be38a8d2043067021f0f76}{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf choose\-\_\-axis\-\_\-position}\par
+{\em La fonction trouve le plan de coupe
+
+private
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur dont on cherche le plan de coupe \\
+\hline
+{\em sorting\-Axis} & l axe de coupe auquel le plan est orthogonal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int la position dans la table de couleur de la premiere couleur superieure au plan de coupe 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{arbre_8c_a08d1ae8013d00ebf25df39235c93cf47}{choose\-\_\-axis\-\_\-position} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, \hyperlink{table_8h_accc088009d44c521706aa98d6387ee21}{axis} sorting\-Axis)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf create\-\_\-kdtree}\par
+{\em La fonction cree le kd arbre de tri
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur a decouper en kd arbre \\
+\hline
+{\em seuil} & le nombre minimum de couleur dans une feuille de l arbre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+kdtree pointer sur la racine de l arbre 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structkdtree}{kdtree} \hyperlink{arbre_8c_aed379cbd7918a4b14cafe0c6712b19d9}{create\-\_\-kdtree} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, int seuil)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf destroy\-\_\-kdtree}\par
+{\em La fonction supprime le kd arbre et ses fils
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & l arbre a detruire \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{arbre_8c_aefc550d04146f05d9899995557bedd02}{destroy\-\_\-kdtree} (\hyperlink{structkdtree}{kdtree} tree)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf get\-\_\-distance\-\_\-between\-\_\-colors}\par
+{\em La fonction calcul la distance entre 2 couleurs
+
+private
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & une couleur sous forme d un pointer vers tableau des 3 composantes \\
+\hline
+{\em b} & une couleur sous forme d un pointer vers tableau des 3 composantes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double la distance entre a et b 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{arbre_8c_ae2005e1b74987e10ecc747639ccb1b51}{get\-\_\-distance\-\_\-between\-\_\-colors} (\hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$a, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$b)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node}\par
+{\em La fonction cherche la couleur la plus proche dans un noeud
+
+private
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & le noeud dans lequel on fait la recherche \\
+\hline
+{\em input\-Color} & la couleur d origine dont on cherche la plus proche \\
+\hline
+{\em output\-Color} & la couleur la plus proche trouvee \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{arbre_8c_aa37965d2b84c7c5544cee45c6da00a28}{search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node} (\hyperlink{structkdtree}{kdtree} tree, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$input\-Color, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$output\-Color)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf kdtree\-\_\-get\-\_\-nearest\-\_\-color}\par
+{\em La fonction cherche la couleur la plus proche dans tout l arbre
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & la racine de l arbre de recherche \\
+\hline
+{\em input\-Color} & la couleur d origine dont on cherche la plus proche \\
+\hline
+{\em output\-Color} & la couleur la plus proche trouvee \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{arbre_8c_a7831512a797a590c475cd51242c334f9}{kdtree\-\_\-get\-\_\-nearest\-\_\-color} (\hyperlink{structkdtree}{kdtree} tree, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$input\-Color, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$output\-Color)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Fonctions pour les kd arbres. \begin{DoxyAuthor}{Author}
+Durand Valentin T\-P3 Informatique Promo 2018 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Janvier 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{arbre_8c_a08d1ae8013d00ebf25df39235c93cf47}{\index{arbre.\-c@{arbre.\-c}!choose\-\_\-axis\-\_\-position@{choose\-\_\-axis\-\_\-position}}
+\index{choose\-\_\-axis\-\_\-position@{choose\-\_\-axis\-\_\-position}!arbre.c@{arbre.\-c}}
+\subsubsection[{choose\-\_\-axis\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}int choose\-\_\-axis\-\_\-position (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{{\bf axis}}]{sorting\-Axis}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_a08d1ae8013d00ebf25df39235c93cf47}
+\hypertarget{arbre_8c_a18fbbea78ff279a9e265adcc938c4b8a}{\index{arbre.\-c@{arbre.\-c}!choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max@{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max}}
+\index{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max@{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max}!arbre.c@{arbre.\-c}}
+\subsubsection[{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf axis} choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-max (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_a18fbbea78ff279a9e265adcc938c4b8a}
+\hypertarget{arbre_8c_a3d051b4d04be38a8d2043067021f0f76}{\index{arbre.\-c@{arbre.\-c}!choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var@{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var}}
+\index{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var@{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var}!arbre.c@{arbre.\-c}}
+\subsubsection[{choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf axis} choose\-\_\-sorting\-\_\-axis\-\_\-by\-\_\-var (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_a3d051b4d04be38a8d2043067021f0f76}
+\hypertarget{arbre_8c_aed379cbd7918a4b14cafe0c6712b19d9}{\index{arbre.\-c@{arbre.\-c}!create\-\_\-kdtree@{create\-\_\-kdtree}}
+\index{create\-\_\-kdtree@{create\-\_\-kdtree}!arbre.c@{arbre.\-c}}
+\subsubsection[{create\-\_\-kdtree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kdtree} create\-\_\-kdtree (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{int}]{seuil}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_aed379cbd7918a4b14cafe0c6712b19d9}
+\hypertarget{arbre_8c_aefc550d04146f05d9899995557bedd02}{\index{arbre.\-c@{arbre.\-c}!destroy\-\_\-kdtree@{destroy\-\_\-kdtree}}
+\index{destroy\-\_\-kdtree@{destroy\-\_\-kdtree}!arbre.c@{arbre.\-c}}
+\subsubsection[{destroy\-\_\-kdtree}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\-\_\-kdtree (
+\begin{DoxyParamCaption}
+\item[{{\bf kdtree}}]{tree}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_aefc550d04146f05d9899995557bedd02}
+\hypertarget{arbre_8c_ae2005e1b74987e10ecc747639ccb1b51}{\index{arbre.\-c@{arbre.\-c}!get\-\_\-distance\-\_\-between\-\_\-colors@{get\-\_\-distance\-\_\-between\-\_\-colors}}
+\index{get\-\_\-distance\-\_\-between\-\_\-colors@{get\-\_\-distance\-\_\-between\-\_\-colors}!arbre.c@{arbre.\-c}}
+\subsubsection[{get\-\_\-distance\-\_\-between\-\_\-colors}]{\setlength{\rightskip}{0pt plus 5cm}double get\-\_\-distance\-\_\-between\-\_\-colors (
+\begin{DoxyParamCaption}
+\item[{{\bf color} $\ast$}]{a, }
+\item[{{\bf color} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_ae2005e1b74987e10ecc747639ccb1b51}
+\hypertarget{arbre_8c_a7831512a797a590c475cd51242c334f9}{\index{arbre.\-c@{arbre.\-c}!kdtree\-\_\-get\-\_\-nearest\-\_\-color@{kdtree\-\_\-get\-\_\-nearest\-\_\-color}}
+\index{kdtree\-\_\-get\-\_\-nearest\-\_\-color@{kdtree\-\_\-get\-\_\-nearest\-\_\-color}!arbre.c@{arbre.\-c}}
+\subsubsection[{kdtree\-\_\-get\-\_\-nearest\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}void kdtree\-\_\-get\-\_\-nearest\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{{\bf kdtree}}]{tree, }
+\item[{{\bf color} $\ast$}]{input\-Color, }
+\item[{{\bf color} $\ast$}]{output\-Color}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_a7831512a797a590c475cd51242c334f9}
+\hypertarget{arbre_8c_aa37965d2b84c7c5544cee45c6da00a28}{\index{arbre.\-c@{arbre.\-c}!search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node@{search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node}}
+\index{search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node@{search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node}!arbre.c@{arbre.\-c}}
+\subsubsection[{search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}void search\-\_\-nearest\-\_\-color\-\_\-in\-\_\-node (
+\begin{DoxyParamCaption}
+\item[{{\bf kdtree}}]{tree, }
+\item[{{\bf color} $\ast$}]{input\-Color, }
+\item[{{\bf color} $\ast$}]{output\-Color}
+\end{DoxyParamCaption}
+)}}\label{arbre_8c_aa37965d2b84c7c5544cee45c6da00a28}

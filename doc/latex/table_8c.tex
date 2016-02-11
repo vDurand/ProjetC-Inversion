@@ -1,0 +1,250 @@
+\hypertarget{table_8c}{\section{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/table.c File Reference}
+\label{table_8c}\index{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/table.\-c@{/media/psf/\-Home/\-Desktop/\-Prog C/\-Projet\-C-\/\-Inversion/src/table.\-c}}
+}
+
+
+Fonctions pour les tables de couleurs.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}image.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{Indent}{\bf create\-\_\-color\-\_\-table}\par
+{\em La fonction cree une table a partir d’une image composee d’une seule ligne.
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & image a partir de laquelle on cree la table de couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+color\-Table la table de couleur cree Il faut donc allouer le pointeur, initialiser la longueur et remplir le tableau. Le champ owner est positionne a true dans ce cas. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcolor__table}{color\-\_\-table} \hyperlink{table_8c_a6cb91976178867cbb9f015404c8ceaf1}{create\-\_\-color\-\_\-table} (\hyperlink{structimage}{image} img)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf destroy\-\_\-color\-\_\-table}\par
+{\em La fonction supprime une table de couleur.
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & la table de couleur a supprimer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\-R\-U\-E} & si libere avec owner \\
+\hline
+{\em F\-A\-L\-S\-E} & si libere sans owner Le pointeur ne doit etre libere que si owner est positionne a true. La structure contenant la table doit par contre etre liberee dans tous les cas. \\
+\hline
+\end{DoxyRetVals}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{table_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{table_8c_ae7a5e1dc0d5ac5c12ef49c20a1cfa6bc}{destroy\-\_\-color\-\_\-table} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf color\-\_\-table\-\_\-duplicate}\par
+{\em La fonction cree une sous table.
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur mere \\
+\hline
+{\em offset} & indice de debut de la sous table \\
+\hline
+{\em length} & longueur de la sous table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sub\-Table la sous table de couleur cree Cette fonction initialise son pointeur a partir de celui de la table principale sans faire d’allocation. Le champ owner doit etre positionne a false. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcolor__table}{color\-\_\-table} \hyperlink{table_8c_aee98f4a5e307c4843bc590316114a1f3}{color\-\_\-table\-\_\-duplicate} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, int offset, int length)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf color\-\_\-table\-\_\-get\-\_\-color}\par
+{\em La fonction donne la couleur rgb a une position precise dans la table de couleur.
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur dans laquel on veut trouver la couleur \\
+\hline
+{\em index} & position dans la table ou on veut la couleur \\
+\hline
+{\em found\-Color} & tableau 1\-D de taille 3 stockant la couleur rgb trouvee \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rien 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{table_8c_a08c4a756f12010a658c34f58a2df3e22}{color\-\_\-table\-\_\-get\-\_\-color} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, int index, \hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} $\ast$found\-Color)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color}\par
+{\em La fonction donne le nombre de couleurs dans la table de couleur.
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table dont on veut le nombre de couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int le nombre de couleur 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{table_8c_a5bf5e6525045ed71466230487d708927}{color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf color\-\_\-table\-\_\-sort}\par
+{\em La fonction trie les elements d’une table de couleur par ordre croissant en fonction de leurs coodonnees sur un axe
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur a trier \\
+\hline
+{\em sorting\-Axis} & axe R\-G\-B utilise pour le tri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rien 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{table_8c_a0758f9a3711d9d92e94ec9108654459b}{color\-\_\-table\-\_\-sort} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, \hyperlink{table_8h_accc088009d44c521706aa98d6387ee21}{axis} sorting\-Axis)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf color\-\_\-table\-\_\-get\-\_\-min}\par
+{\em La fonction retourne la couleur la plus faible pour un axe rgb donné
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur dont on cherche le minimum \\
+\hline
+{\em sorting\-Axis} & axe R\-G\-B utilise pour chercher le minimum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la couleur la plus petite trouvee 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} \hyperlink{table_8c_a8afa4e21f229089c4c4bf91070b84f53}{color\-\_\-table\-\_\-get\-\_\-min} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, \hyperlink{table_8h_accc088009d44c521706aa98d6387ee21}{axis} sorting\-Axis)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf color\-\_\-table\-\_\-get\-\_\-max}\par
+{\em La fonction retourne la couleur la plus grande pour un axe rgb donné
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\-Table} & table de couleur dont on cherche le maximum \\
+\hline
+{\em sorting\-Axis} & axe R\-G\-B utilise pour chercher le maximum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la couleur la plus grande trouvee 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\hyperlink{table_8h_a37dbdc30935031c05304482e1be89d8f}{color} \hyperlink{table_8c_a636a9556155a68af25c77b97d2c649bd}{color\-\_\-table\-\_\-get\-\_\-max} (\hyperlink{structcolor__table}{color\-\_\-table} c\-Table, \hyperlink{table_8h_accc088009d44c521706aa98d6387ee21}{axis} sorting\-Axis)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Fonctions pour les tables de couleurs. \begin{DoxyAuthor}{Author}
+Durand Valentin T\-P3 Informatique Promo 2018 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Decembre 2015 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{table_8c_aee98f4a5e307c4843bc590316114a1f3}{\index{table.\-c@{table.\-c}!color\-\_\-table\-\_\-duplicate@{color\-\_\-table\-\_\-duplicate}}
+\index{color\-\_\-table\-\_\-duplicate@{color\-\_\-table\-\_\-duplicate}!table.c@{table.\-c}}
+\subsubsection[{color\-\_\-table\-\_\-duplicate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color\-\_\-table} color\-\_\-table\-\_\-duplicate (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{int}]{offset, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}}\label{table_8c_aee98f4a5e307c4843bc590316114a1f3}
+\hypertarget{table_8c_a08c4a756f12010a658c34f58a2df3e22}{\index{table.\-c@{table.\-c}!color\-\_\-table\-\_\-get\-\_\-color@{color\-\_\-table\-\_\-get\-\_\-color}}
+\index{color\-\_\-table\-\_\-get\-\_\-color@{color\-\_\-table\-\_\-get\-\_\-color}!table.c@{table.\-c}}
+\subsubsection[{color\-\_\-table\-\_\-get\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}void color\-\_\-table\-\_\-get\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{int}]{index, }
+\item[{{\bf color} $\ast$}]{found\-Color}
+\end{DoxyParamCaption}
+)}}\label{table_8c_a08c4a756f12010a658c34f58a2df3e22}
+\hypertarget{table_8c_a636a9556155a68af25c77b97d2c649bd}{\index{table.\-c@{table.\-c}!color\-\_\-table\-\_\-get\-\_\-max@{color\-\_\-table\-\_\-get\-\_\-max}}
+\index{color\-\_\-table\-\_\-get\-\_\-max@{color\-\_\-table\-\_\-get\-\_\-max}!table.c@{table.\-c}}
+\subsubsection[{color\-\_\-table\-\_\-get\-\_\-max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color} color\-\_\-table\-\_\-get\-\_\-max (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{{\bf axis}}]{sorting\-Axis}
+\end{DoxyParamCaption}
+)}}\label{table_8c_a636a9556155a68af25c77b97d2c649bd}
+\hypertarget{table_8c_a8afa4e21f229089c4c4bf91070b84f53}{\index{table.\-c@{table.\-c}!color\-\_\-table\-\_\-get\-\_\-min@{color\-\_\-table\-\_\-get\-\_\-min}}
+\index{color\-\_\-table\-\_\-get\-\_\-min@{color\-\_\-table\-\_\-get\-\_\-min}!table.c@{table.\-c}}
+\subsubsection[{color\-\_\-table\-\_\-get\-\_\-min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color} color\-\_\-table\-\_\-get\-\_\-min (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{{\bf axis}}]{sorting\-Axis}
+\end{DoxyParamCaption}
+)}}\label{table_8c_a8afa4e21f229089c4c4bf91070b84f53}
+\hypertarget{table_8c_a5bf5e6525045ed71466230487d708927}{\index{table.\-c@{table.\-c}!color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color@{color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color}}
+\index{color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color@{color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color}!table.c@{table.\-c}}
+\subsubsection[{color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}int color\-\_\-table\-\_\-get\-\_\-nb\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table}
+\end{DoxyParamCaption}
+)}}\label{table_8c_a5bf5e6525045ed71466230487d708927}
+\hypertarget{table_8c_a0758f9a3711d9d92e94ec9108654459b}{\index{table.\-c@{table.\-c}!color\-\_\-table\-\_\-sort@{color\-\_\-table\-\_\-sort}}
+\index{color\-\_\-table\-\_\-sort@{color\-\_\-table\-\_\-sort}!table.c@{table.\-c}}
+\subsubsection[{color\-\_\-table\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}void color\-\_\-table\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table, }
+\item[{{\bf axis}}]{sorting\-Axis}
+\end{DoxyParamCaption}
+)}}\label{table_8c_a0758f9a3711d9d92e94ec9108654459b}
+\hypertarget{table_8c_a6cb91976178867cbb9f015404c8ceaf1}{\index{table.\-c@{table.\-c}!create\-\_\-color\-\_\-table@{create\-\_\-color\-\_\-table}}
+\index{create\-\_\-color\-\_\-table@{create\-\_\-color\-\_\-table}!table.c@{table.\-c}}
+\subsubsection[{create\-\_\-color\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf color\-\_\-table} create\-\_\-color\-\_\-table (
+\begin{DoxyParamCaption}
+\item[{{\bf image}}]{img}
+\end{DoxyParamCaption}
+)}}\label{table_8c_a6cb91976178867cbb9f015404c8ceaf1}
+\hypertarget{table_8c_ae7a5e1dc0d5ac5c12ef49c20a1cfa6bc}{\index{table.\-c@{table.\-c}!destroy\-\_\-color\-\_\-table@{destroy\-\_\-color\-\_\-table}}
+\index{destroy\-\_\-color\-\_\-table@{destroy\-\_\-color\-\_\-table}!table.c@{table.\-c}}
+\subsubsection[{destroy\-\_\-color\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} destroy\-\_\-color\-\_\-table (
+\begin{DoxyParamCaption}
+\item[{{\bf color\-\_\-table}}]{c\-Table}
+\end{DoxyParamCaption}
+)}}\label{table_8c_ae7a5e1dc0d5ac5c12ef49c20a1cfa6bc}
